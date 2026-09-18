@@ -28,6 +28,7 @@ function App() {
           <a href="#approach" onClick={() => setMenuOpen(false)}>Approach</a>
           <a href="#strengths" onClick={() => setMenuOpen(false)}>Strengths</a>
           <a href="#experience" onClick={() => setMenuOpen(false)}>Experience</a>
+          <a href="playbook.html">Playbook</a>
           <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         </nav>
       </header>
@@ -108,6 +109,7 @@ function App() {
                 <p>Recommend the one path forward, with the reasoning that got you there.</p>
               </div>
             </div>
+            <a className="text-link playbook-link" href="playbook.html">More frameworks like this in my Playbook <ArrowUpRight size={14} /></a>
           </div>
         </section>
 
