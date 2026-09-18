@@ -74,8 +74,8 @@ h1 span { color: var(--green-bright); }
 .framework-num { display: block; font-size: 32px; font-weight: 800; color: var(--gold); line-height: 1; }
 .framework-step h4 { margin: 14px 0 8px; font-size: 15px; }
 .framework-step p { color: var(--muted); font-size: 13px; line-height: 1.65; margin: 0; }
-.strengths-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; margin-top: 50px; }
-.strength-card { padding: 30px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; transition: background .2s; }
+.strengths-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 50px; }
+.strength-card { flex: 1 1 320px; max-width: 360px; padding: 30px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; transition: background .2s; }
 .strength-card:hover { background: var(--panel-2); }
 .strength-card h3 { margin: 16px 0 10px; font-size: 19px; }
 .strength-card > p { color: var(--muted); font-size: 13px; line-height: 1.65; }
