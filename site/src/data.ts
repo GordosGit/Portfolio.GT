@@ -37,14 +37,14 @@ export const projects: Project[] = [
     accent: "gold"
   },
   {
-    title: "Job Fit Analyzer",
+    title: "Job Fit Analyzerinator",
     eyebrow: "AI SKILL",
     description: "Compares a résumé against a job posting, identifies evidence and gaps, evaluates the match, and supports tailored application output.",
     problem: "Generic applications hide whether the candidate actually matches the requirements.",
     approach: "Treat the job description as a requirements set and the résumé as an evidence base.",
     output: "A structured fit analysis with gaps and application guidance.",
     skills: ["Gap Analysis", "Evidence Mapping", "Evaluation", "Career Workflow"],
-    href: "https://github.com/GordosGit/Portfolio.GT/tree/main/skills/job-fit-analyzer",
+    href: "https://github.com/GordosGit/Portfolio.GT/tree/main/skills/job-fit-analyzerinator",
     featured: true,
     accent: "green"
   }

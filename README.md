@@ -19,7 +19,7 @@ Reusable, structured processes that guide an AI assistant through a specific wor
 | Skill | What it does | PO/BA skill it reflects |
 |---|---|---|
 | [`the-ideageneratorinator`](./skills/the-ideageneratorinator/) | Turns a one-line problem or idea into a lean concept brief (problem, solution, audience, differentiation, risks) through a short guided interview. | Requirements elicitation and discovery — asking the right sequence of questions to turn a vague ask into something a team can actually scope. |
-| [`job-fit-analyzer`](./skills/job-fit-analyzer/) | Compares a resume against a job posting, scores fit and ATS pass probability, identifies gaps, and drafts a tailored cover letter — gated by how strong the match actually is. | Gap analysis and evidence-based evaluation against a defined set of requirements, rather than a generic pass/fail. |
+| [`job-fit-analyzerinator`](./skills/job-fit-analyzerinator/) | Compares a resume against a job posting, scores fit and ATS pass probability, identifies gaps, and drafts a tailored cover letter — gated by how strong the match actually is. | Gap analysis and evidence-based evaluation against a defined set of requirements, rather than a generic pass/fail. |
 
 Additional skills and experiments live in the companion repo, [GordosGit/tools](https://github.com/GordosGit/tools).
 
@@ -43,7 +43,7 @@ Full write-up (architecture diagram, design tradeoffs, sample output, the actual
 PortfolioGT/
 ├── skills/
 │   ├── the-ideageneratorinator/
-│   └── job-fit-analyzer/
+│   └── job-fit-analyzerinator/
 ├── agents/
 │   └── daily-job-search/
 ├── projects/         # planned
