@@ -25,14 +25,14 @@ export const projects: Project[] = [
     accent: "green"
   },
   {
-    title: "The IdeaGeneratorinator",
+    title: "The Idea Generatorinator",
     eyebrow: "AI SKILL",
     description: "Turns a one-line problem or idea into a lean concept brief through a short, guided discovery conversation.",
     problem: "A vague idea is rarely ready to scope, prioritize, or hand to a delivery team.",
     approach: "Encode a structured discovery sequence that asks the questions a good BA would ask before moving into solution mode.",
     output: "Problem, solution, audience, differentiation, and risks.",
     skills: ["Discovery", "Requirements", "Prompt Design", "Structured Thinking"],
-    href: "https://github.com/GordosGit/Portfolio.GT/tree/main/skills/the-ideageneratorinator",
+    href: "https://github.com/GordosGit/Portfolio.GT/tree/main/skills/the-idea-generatorinator",
     featured: true,
     accent: "gold"
   },
