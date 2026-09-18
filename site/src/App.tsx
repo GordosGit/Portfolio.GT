@@ -50,6 +50,9 @@ function App() {
             <div className="credibility">
               <span>PRODUCT</span><i /> <span>ANALYSIS</span><i /> <span>AI</span><i /> <span>AUTOMATION</span>
             </div>
+            <motion.p initial="hidden" animate="visible" variants={fadeUp} className="hero-mantra">
+              My operating philosophy: I turn monsters into teddy bears — breaking intimidating problems into pieces a team can actually act on.
+            </motion.p>
           </div>
 
           <motion.div initial={{ opacity: 0, scale: .96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: .8 }} className="hero-orbit">
@@ -65,7 +68,8 @@ function App() {
         <section className="section manifesto" id="approach">
           <div className="section-heading">
             <div className="eyebrow">THE THROUGH-LINE</div>
-            <h2>AI that reflects how I think.</h2>
+            <h2>I turn monsters into teddy bears.</h2>
+            <p className="section-lede">Every intimidating problem — a blank slate, a stalled migration, a vague ask — gets the same treatment: isolate what's actually being asked, strip out the noise, and break it into pieces a team can act on with confidence. Here's how that plays out in practice:</p>
           </div>
           <div className="manifesto-grid">
             {[
