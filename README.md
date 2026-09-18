@@ -16,7 +16,6 @@ Reusable, structured processes that guide an AI assistant through a specific wor
 
 | Skill | What it does | PO/BA skill it reflects |
 |---|---|---|
-| [`the-council`](./skills/the-council/) | Runs a high-stakes decision through five independent advisor personas with distinct thinking styles, has them critique each other, then synthesizes a final recommendation. | Structured decision-making, surfacing disagreement and blind spots before a decision is locked in — the AI equivalent of a pre-mortem or a stakeholder round-robin. |
 | [`the-ideageneratorinator`](./skills/the-ideageneratorinator/) | Turns a one-line problem or idea into a lean concept brief (problem, solution, audience, differentiation, risks) through a short guided interview. | Requirements elicitation and discovery — asking the right sequence of questions to turn a vague ask into something a team can actually scope. |
 | [`job-fit-analyzer`](./skills/job-fit-analyzer/) | Compares a resume against a job posting, scores fit and ATS pass probability, identifies gaps, and drafts a tailored cover letter — gated by how strong the match actually is. | Gap analysis and evidence-based evaluation against a defined set of requirements, rather than a generic pass/fail. |
 
@@ -35,7 +34,6 @@ Additional skills and experiments live in the companion repo, [GordosGit/tools](
 ```
 PortfolioGT/
 ├── skills/
-│   ├── the-council/
 │   ├── the-ideageneratorinator/
 │   └── job-fit-analyzer/
 ├── agents/          # planned
