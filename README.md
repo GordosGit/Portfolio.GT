@@ -23,7 +23,13 @@ Additional skills and experiments live in the companion repo, [GordosGit/tools](
 
 ### Agents
 
-*(Coming soon — multi-step agents that chain these skills together for end-to-end workflows.)*
+Autonomous, scheduled workflows that run without me triggering them — the agent equivalent of a well-designed recurring process rather than a one-off script.
+
+| Agent | What it does | PO/BA skill it reflects |
+|---|---|---|
+| [`daily-job-search`](./agents/daily-job-search/) | Runs every morning: searches job boards across three role categories, scores each posting against my resume with a fixed rubric, dedupes against a persistent tracker, and emails a summary only when there's something genuinely new. | Process design and continuous improvement — the write-up includes a real example of spotting a coverage gap in the results, shipping a fix the same day, and validating it with before/after numbers rather than assuming it worked. |
+
+Full write-up (architecture diagram, design tradeoffs, sample output, the actual scheduled prompt) is in the [agent's README](./agents/daily-job-search/).
 
 ### Projects
 
@@ -36,7 +42,8 @@ PortfolioGT/
 ├── skills/
 │   ├── the-ideageneratorinator/
 │   └── job-fit-analyzer/
-├── agents/          # planned
+├── agents/
+│   └── daily-job-search/
 ├── projects/         # planned
 └── README.md
 ```
