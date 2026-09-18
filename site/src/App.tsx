@@ -43,7 +43,7 @@ function App() {
               Turning ambiguous problems into <span>structured AI workflows.</span>
             </motion.h1>
             <motion.p initial="hidden" animate="visible" variants={fadeUp} className="hero-text">
-              I’m Gord Turner — a Senior Product Owner and Business Analyst building practical AI tools that formalize the analytical work behind good product decisions.
+              I’m <span className="name-accent">Gord Turner</span> — a Senior Product Owner and Business Analyst building practical AI tools that formalize the analytical work behind good product decisions.
             </motion.p>
             <motion.div initial="hidden" animate="visible" variants={fadeUp} className="hero-actions">
               <a className="button primary" href="#work">Explore the work <ArrowDown size={17} /></a>
