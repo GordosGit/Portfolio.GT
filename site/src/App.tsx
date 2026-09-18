@@ -70,7 +70,7 @@ function App() {
         <section className="section manifesto" id="approach">
           <div className="section-heading">
             <div className="eyebrow">THE THROUGH-LINE</div>
-            <h2>I turn monsters into teddy bears.</h2>
+            <h2>Turning monsters into teddy bears.</h2>
             <p className="section-lede">Every intimidating problem — a blank slate, a stalled migration, a vague ask — gets the same treatment: isolate what's actually being asked, strip out the noise, and break it into pieces a team can act on with confidence. Here's how that plays out in practice:</p>
           </div>
           <div className="manifesto-grid">
