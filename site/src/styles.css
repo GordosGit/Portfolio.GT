@@ -67,6 +67,21 @@ h1 span { color: var(--green-bright); }
 .principle-number { color: var(--gold); font-size: 10px; letter-spacing: .15em; }
 .principle h3 { margin: 45px 0 12px; font-size: 20px; }
 .principle p, .split-heading p { color: var(--muted); line-height: 1.7; font-size: 14px; }
+.framework-block { margin-top: 70px; padding-top: 55px; border-top: 1px solid var(--line); }
+.framework-block h3 { margin: 12px 0 0; font-size: clamp(26px, 3vw, 36px); letter-spacing: -.035em; }
+.framework-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 35px; }
+.framework-step { padding: 26px; border: 1px solid var(--line); background: rgba(255,255,255,.02); }
+.framework-num { display: block; font-size: 32px; font-weight: 800; color: var(--gold); line-height: 1; }
+.framework-step h4 { margin: 14px 0 8px; font-size: 15px; }
+.framework-step p { color: var(--muted); font-size: 13px; line-height: 1.65; margin: 0; }
+.strengths-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; margin-top: 50px; }
+.strength-card { padding: 30px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; transition: background .2s; }
+.strength-card:hover { background: var(--panel-2); }
+.strength-card h3 { margin: 16px 0 10px; font-size: 19px; }
+.strength-card > p { color: var(--muted); font-size: 13px; line-height: 1.65; }
+.strength-proof { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); }
+.strength-proof strong { color: var(--gold); font-size: 9px; letter-spacing: .17em; }
+.strength-proof p { color: #c3d0c8; font-size: 12.5px; line-height: 1.6; margin: 6px 0 0; }
 .split-heading { display: flex; justify-content: space-between; align-items: end; gap: 40px; }
 .split-heading > p { max-width: 430px; margin: 0; }
 .projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 55px; }
@@ -108,7 +123,7 @@ h1 span { color: var(--green-bright); }
 .contact-card { text-align: center; padding: 90px 30px; border: 1px solid rgba(123,229,161,.22); background: radial-gradient(circle at center, rgba(86,201,130,.1), transparent 52%), var(--panel); }
 .contact-card h2 { margin: 15px auto; max-width: 700px; font-size: clamp(36px, 5vw, 58px); letter-spacing: -.045em; }
 .contact-card p { color: var(--muted); max-width: 540px; margin: 0 auto 30px; line-height: 1.7; }
-.contact-actions { display: flex; justify-content: center; gap: 10px; }
+.contact-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
 .footer { max-width: var(--max); margin: auto; padding: 25px 28px 40px; display: flex; justify-content: space-between; color: #617269; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; border-top: 1px solid var(--line); }
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; padding-top: 40px; }
@@ -116,6 +131,7 @@ h1 span { color: var(--green-bright); }
   .orbit-one { width: 290px; height: 290px; }
   .orbit-two { width: 220px; height: 220px; }
   .manifesto-grid, .projects { grid-template-columns: 1fr 1fr; }
+  .framework-grid { grid-template-columns: 1fr; }
   .project-card.featured:first-child { grid-column: span 2; }
   .flow { grid-template-columns: repeat(3, 1fr); }
   .about-grid { grid-template-columns: 1fr; gap: 35px; }

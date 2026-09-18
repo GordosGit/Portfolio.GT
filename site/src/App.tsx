@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, ArrowUpRight, BrainCircuit, BriefcaseBusiness, CheckCircle2, ExternalLink, Github, Mail, Menu, X } from "lucide-react";
+import { ArrowDown, ArrowUpRight, BrainCircuit, BriefcaseBusiness, CheckCircle2, ExternalLink, Github, Linkedin, Mail, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { experience, projects } from "./data";
 
@@ -26,6 +26,7 @@ function App() {
         <nav className={menuOpen ? "nav-links open" : "nav-links"}>
           <a href="#work" onClick={() => setMenuOpen(false)}>Work</a>
           <a href="#approach" onClick={() => setMenuOpen(false)}>Approach</a>
+          <a href="#strengths" onClick={() => setMenuOpen(false)}>Strengths</a>
           <a href="#experience" onClick={() => setMenuOpen(false)}>Experience</a>
           <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         </nav>
@@ -84,6 +85,29 @@ function App() {
                 <p>{text}</p>
               </motion.article>
             ))}
+          </div>
+
+          <div className="framework-block">
+            <div className="eyebrow">UNDER PRESSURE</div>
+            <h3>The 1-3-1 decision framework.</h3>
+            <p className="section-lede">How I navigate roadblocks and escalations without stalling the room.</p>
+            <div className="framework-grid">
+              <div className="framework-step">
+                <span className="framework-num">1</span>
+                <h4>Problem</h4>
+                <p>Define the root issue clearly so every stakeholder shares the exact same context.</p>
+              </div>
+              <div className="framework-step">
+                <span className="framework-num">3</span>
+                <h4>Options</h4>
+                <p>Present three real paths forward — scope tweaks, architectural pivots, alternative workflows — to respect everyone's time and show proactive ownership.</p>
+              </div>
+              <div className="framework-step">
+                <span className="framework-num">1</span>
+                <h4>Recommendation</h4>
+                <p>Recommend the one path forward, with the reasoning that got you there.</p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -157,6 +181,34 @@ function App() {
           </div>
         </section>
 
+        <section className="section strengths-section" id="strengths">
+          <div className="section-heading">
+            <div className="eyebrow">HOW I'M WIRED</div>
+            <h2>Natural strengths, applied.</h2>
+            <p className="section-lede">My CliftonStrengths Top 5 — not learned skills, but the patterns I default to under pressure. Here's each one showing up in real work.</p>
+          </div>
+          <div className="strengths-grid">
+            {[
+              ["01", "Strategic", "Spots the patterns and alternate paths through a problem before anyone else does — the engine behind the 1-3-1 framework above.", "Recognized migration-blocking apps as a systemic pattern, not one-off issues, and proposed a dedicated modernization stream — turning stalled deals into closed revenue."],
+              ["02", "Ideation", "Connects ideas that don't obviously belong together — the source of the \"monsters into teddy bears\" habit.", "Combined spec-driven design with multi-model AI orchestration into one workflow, giving a lean team the delivery velocity of a full engineering org."],
+              ["03", "Intellection", "Needs to understand the real \"why\" before committing to a \"what\" — thorough by default, not by mandate.", "Spent weeks mapping DBA alert-fatigue patterns before redesigning a monitoring platform — resistant power users adopted it because it solved their actual problem."],
+              ["04", "Significance", "Drawn to work with real, visible stakes — the reason compliance systems and migration blockers are where I do my best work.", "Owned zero-incident revenue-recognition rollouts for BorgWarner and TomTom, where a mistake meant compliance violations for billion-dollar companies."],
+              ["05", "Individualization", "Treats every stakeholder as a distinct person with their own vocabulary and motivations, not a role to be managed.", "Ran the same ERP rollout as four different conversations — ROI framing for executives, functional specs for developers, workflow demos in the language of crane operators."]
+            ].map(([num, title, blurb, proof]) => (
+              <motion.article
+                initial="hidden" whileInView="visible" viewport={{ once: true, amount: .15 }}
+                variants={fadeUp} whileHover={{ y: -5 }}
+                className="strength-card" key={num}
+              >
+                <span className="principle-number">{num}</span>
+                <h3>{title}</h3>
+                <p>{blurb}</p>
+                <div className="strength-proof"><strong>IN PRACTICE</strong><p>{proof}</p></div>
+              </motion.article>
+            ))}
+          </div>
+        </section>
+
         <section className="section experience-section" id="experience">
           <div className="section-heading">
             <div className="eyebrow">EXPERIENCE</div>
@@ -184,6 +236,7 @@ function App() {
             <p>For product, business analysis, AI workflow, or applied AI opportunities, I’d be happy to talk.</p>
             <div className="contact-actions">
               <a className="button primary" href="mailto:gord.turner@gmail.com"><Mail size={17} /> Email me</a>
+              <a className="button ghost" href="https://www.linkedin.com/in/gordturner/" target="_blank" rel="noreferrer"><Linkedin size={17} /> LinkedIn</a>
               <a className="button ghost" href="https://github.com/GordosGit" target="_blank" rel="noreferrer"><Github size={17} /> GitHub</a>
             </div>
           </div>
