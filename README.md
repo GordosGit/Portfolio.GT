@@ -1,4 +1,4 @@
-# PortfolioGT
+# Portfolio.GT
 
 **Applied AI work by Gord Turner — Senior Product Owner / Senior Business Analyst**
 
