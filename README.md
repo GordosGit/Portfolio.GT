@@ -2,6 +2,8 @@
 
 **Applied AI work by Gord Turner — Senior Product Owner / Senior Business Analyst**
 
+🔗 **[Live portfolio site](https://gordosgit.github.io/Portfolio.GT/)** — the React front end for this repo lives in [`site/`](./site/).
+
 This repo is a working portfolio of AI skills, agents, and tools I've built to support product and business analysis work — requirements discovery, stakeholder decision-making, structured evaluation, and process automation. It's meant to show, not tell: rather than a slide claiming "AI-savvy," these are functioning tools that reflect how I actually approach ambiguous problems.
 
 ## Why this exists
