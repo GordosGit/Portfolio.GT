@@ -28,6 +28,7 @@ function App() {
           <a href="#approach" onClick={() => setMenuOpen(false)}>Approach</a>
           <a href="#strengths" onClick={() => setMenuOpen(false)}>Strengths</a>
           <a href="#experience" onClick={() => setMenuOpen(false)}>Experience</a>
+          <a href="case-studies.html">Case Studies</a>
           <a href="playbook.html">Playbook</a>
           <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         </nav>
@@ -119,7 +120,10 @@ function App() {
               <div className="eyebrow">SELECTED WORK</div>
               <h2>Show, not tell.</h2>
             </div>
-            <p>Working AI skills and agents from my portfolio repo — built around real product and business analysis patterns.</p>
+            <p>
+              Working AI skills and agents from my portfolio repo — built around real product and business analysis patterns.{" "}
+              <a className="inline-link" href="case-studies.html">Want the deeper story on one? Read the case studies <ArrowUpRight size={13} /></a>
+            </p>
           </div>
 
           <div className="projects">
@@ -143,7 +147,12 @@ function App() {
                   <div><strong>OUTPUT</strong><p>{project.output}</p></div>
                 </div>
                 <div className="tags">{project.skills.map(skill => <span key={skill}>{skill}</span>)}</div>
-                <a className="text-link" href={project.href} target="_blank" rel="noreferrer">View on GitHub <ExternalLink size={14} /></a>
+                <div className="project-links">
+                  <a className="text-link" href={project.href} target="_blank" rel="noreferrer">View on GitHub <ExternalLink size={14} /></a>
+                  {project.caseStudyHref && (
+                    <a className="text-link" href={project.caseStudyHref}>Read the case study <ArrowUpRight size={14} /></a>
+                  )}
+                </div>
               </motion.article>
             ))}
           </div>

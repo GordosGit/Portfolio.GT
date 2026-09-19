@@ -12,7 +12,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        playbook: resolve(__dirname, "playbook.html")
+        playbook: resolve(__dirname, "playbook.html"),
+        caseStudies: resolve(__dirname, "case-studies.html")
       }
     }
   }

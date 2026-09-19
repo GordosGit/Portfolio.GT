@@ -7,6 +7,7 @@ export type Project = {
   output: string;
   skills: string[];
   href: string;
+  caseStudyHref?: string;
   featured?: boolean;
   accent: string;
 };
@@ -45,6 +46,7 @@ export const projects: Project[] = [
     output: "A structured fit analysis with gaps and application guidance.",
     skills: ["Gap Analysis", "Evidence Mapping", "Evaluation", "Career Workflow"],
     href: "https://github.com/GordosGit/Portfolio.GT/tree/main/skills/job-fit-analyzerinator",
+    caseStudyHref: "case-studies.html#ai-assisted-job-application-pipeline",
     featured: true,
     accent: "green"
   }

@@ -33,6 +33,14 @@ Autonomous, scheduled workflows that run without me triggering them — the agen
 
 Full write-up (architecture diagram, design tradeoffs, sample output, the actual scheduled prompt) is in the [agent's README](./agents/daily-job-search/).
 
+### Case Studies
+
+Deeper write-ups on select projects — problem, approach, results, and what I'd do differently next. These go beyond "here's a tool" to show the judgment behind it: what failed first, what got permanently fixed because of it, and what the evidence actually showed.
+
+| Case Study | What it covers |
+|---|---|
+| [`ai-assisted-job-application-pipeline`](./case-studies/ai-assisted-job-application-pipeline.md) | Building a repeatable, self-correcting evaluation pipeline for tailoring resumes and cover letters — using the `job-fit-analyzerinator` skill as the engine, with a gating rule so a weak match never gets a cover letter written for it. |
+
 ### Projects
 
 *(Coming soon — larger builds that apply these tools to real product/analysis problems.)*
@@ -46,6 +54,8 @@ PortfolioGT/
 │   └── job-fit-analyzerinator/
 ├── agents/
 │   └── daily-job-search/
+├── case-studies/
+│   └── ai-assisted-job-application-pipeline.md
 ├── projects/         # planned
 └── README.md
 ```
