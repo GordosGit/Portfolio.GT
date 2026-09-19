@@ -34,6 +34,7 @@ export const projects: Project[] = [
     output: "Problem, solution, audience, differentiation, and risks.",
     skills: ["Discovery", "Requirements", "Prompt Design", "Structured Thinking"],
     href: "https://github.com/GordosGit/Portfolio.GT/tree/main/skills/the-idea-generatorinator",
+    caseStudyHref: "case-studies.html#idea-validation-sunday-dinner",
     featured: true,
     accent: "gold"
   },

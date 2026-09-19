@@ -40,6 +40,7 @@ Deeper write-ups on select projects — problem, approach, results, and what I'd
 | Case Study | What it covers |
 |---|---|
 | [`ai-assisted-job-application-pipeline`](./case-studies/ai-assisted-job-application-pipeline.md) | Building a repeatable, self-correcting evaluation pipeline for tailoring resumes and cover letters — using the `job-fit-analyzerinator` skill as the engine, with a gating rule so a weak match never gets a cover letter written for it. |
+| [`idea-validation-sunday-dinner`](./case-studies/idea-validation-sunday-dinner.md) | Running a concept brief from `the-idea-generatorinator` through a five-persona adversarial review process before committing to a build — and how the review caught that the real risk was untested, not that the idea was bad. |
 
 ### Projects
 
@@ -55,7 +56,8 @@ PortfolioGT/
 ├── agents/
 │   └── daily-job-search/
 ├── case-studies/
-│   └── ai-assisted-job-application-pipeline.md
+│   ├── ai-assisted-job-application-pipeline.md
+│   └── idea-validation-sunday-dinner.md
 ├── projects/         # planned
 └── README.md
 ```
