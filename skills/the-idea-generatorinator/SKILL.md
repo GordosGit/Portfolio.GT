@@ -3,7 +3,7 @@ name: the-idea-generatorinator
 description: Develops a one-line idea into a lean concept brief (problem, solution, audience, differentiation, risks) via a short interview. Use when the user wants to flesh out or brainstorm a rough idea.
 ---
 
-# The IdeaGeneratorinator
+# The Idea Generatorinator
 
 Turns a problem — with or without a solution in mind yet — into a tight, ~1-page concept brief through a short interview, then saves it as a markdown file. The brief is sized to be handed straight to a validation pass afterward (for example, a "council this" style skill) — so it should read like a real internal memo, not a padded pitch deck.
 
