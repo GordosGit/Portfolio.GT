@@ -50,6 +50,19 @@ export const projects: Project[] = [
     caseStudyHref: "case-studies.html#ai-assisted-job-application-pipeline",
     featured: true,
     accent: "green"
+  },
+  {
+    title: "Olympus",
+    eyebrow: "AI SKILL",
+    description: "A six-persona adversarial review — Zeus, Athena, Hephaestus, Hermes, Apollo, and Aphrodite — that pressure-tests an idea from genuinely conflicting angles before real effort gets spent building it.",
+    problem: "A single AI response tends to converge on one balanced-sounding answer, hiding the real tensions a stakeholder group would raise.",
+    approach: "Six personas argue from one fixed bias each, surface genuine disagreement, and a verdict can be appealed and re-argued rather than just accepted.",
+    output: "A clear recommendation, the friction that mattered most, and the cheapest next step to test the biggest remaining uncertainty.",
+    skills: ["Multi-Perspective Review", "Risk Analysis", "Decision Frameworks", "Facilitation"],
+    href: "https://github.com/GordosGit/Portfolio.GT/tree/main/skills/olympus",
+    caseStudyHref: "case-studies.html#pressure-testing-pocket-chef-with-olympus",
+    featured: true,
+    accent: "gold"
   }
 ];
 

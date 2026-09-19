@@ -20,6 +20,7 @@ Reusable, structured processes that guide an AI assistant through a specific wor
 |---|---|---|
 | [`the-idea-generatorinator`](./skills/the-idea-generatorinator/) | Turns a one-line problem or idea into a lean concept brief (problem, solution, audience, differentiation, risks) through a short guided interview. | Requirements elicitation and discovery — asking the right sequence of questions to turn a vague ask into something a team can actually scope. |
 | [`job-fit-analyzerinator`](./skills/job-fit-analyzerinator/) | Compares a resume against a job posting, scores fit and ATS pass probability, identifies gaps, and drafts a tailored cover letter — gated by how strong the match actually is. | Gap analysis and evidence-based evaluation against a defined set of requirements, rather than a generic pass/fail. |
+| [`olympus`](./skills/olympus/) | Runs an idea or decision through six biased personas (Zeus, Athena, Hephaestus, Hermes, Apollo, Aphrodite), surfaces genuine disagreement between them, and delivers a verdict that can be appealed and re-argued. | Multi-perspective risk analysis and structured decision facilitation — pressure-testing a plan from conflicting stakeholder angles before committing resources to it. |
 
 Additional skills and experiments live in the companion repo, [GordosGit/tools](https://github.com/GordosGit/tools).
 
@@ -41,6 +42,7 @@ Deeper write-ups on select projects — problem, approach, results, and what I'd
 |---|---|
 | [`ai-assisted-job-application-pipeline`](./case-studies/ai-assisted-job-application-pipeline.md) | Building a repeatable, self-correcting evaluation pipeline for tailoring resumes and cover letters — using the `job-fit-analyzerinator` skill as the engine, with a gating rule so a weak match never gets a cover letter written for it. |
 | [`idea-validation-sunday-dinner`](./case-studies/idea-validation-sunday-dinner.md) | Running a concept brief from `the-idea-generatorinator` through a five-persona adversarial review process before committing to a build — and how the review caught that the real risk was untested, not that the idea was bad. |
+| [`pressure-testing-pocket-chef-with-olympus`](./case-studies/pressure-testing-pocket-chef-with-olympus.md) | Building `olympus`, running a new concept through it across two rounds of appeal, then catching that the review itself had stayed inside the idea's inflated frame the whole time — and rescoping from the original problem, not the inflated solution. |
 
 ### Projects
 
@@ -52,12 +54,14 @@ Deeper write-ups on select projects — problem, approach, results, and what I'd
 PortfolioGT/
 ├── skills/
 │   ├── the-idea-generatorinator/
-│   └── job-fit-analyzerinator/
+│   ├── job-fit-analyzerinator/
+│   └── olympus/
 ├── agents/
 │   └── daily-job-search/
 ├── case-studies/
 │   ├── ai-assisted-job-application-pipeline.md
-│   └── idea-validation-sunday-dinner.md
+│   ├── idea-validation-sunday-dinner.md
+│   └── pressure-testing-pocket-chef-with-olympus.md
 ├── projects/         # planned
 └── README.md
 ```
