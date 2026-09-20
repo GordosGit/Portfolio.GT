@@ -26,6 +26,18 @@ export const projects: Project[] = [
     accent: "green"
   },
   {
+    title: "The Problem Definerinator",
+    eyebrow: "AI SKILL",
+    description: "Clarifies a vague complaint, hunch, or \"something feels off\" into a problem that's specific, falsifiable, and restatable by someone who wasn't in the room — before any solutioning starts.",
+    problem: "Most bad ideas aren't badly executed — they're solving a problem that was never actually pinned down.",
+    approach: "A soft-handed conversation that keeps sharpening the problem and parks stray solution ideas instead of chasing them, until three done conditions are met.",
+    output: "A structured problem-definition document, plus a parking lot of ideas ready to feed into the-idea-generatorinator.",
+    skills: ["Problem Framing", "Requirements Elicitation", "Facilitation", "Structured Thinking"],
+    href: "https://github.com/GordosGit/Portfolio.GT/tree/main/skills/the-problem-definerinator",
+    featured: true,
+    accent: "green"
+  },
+  {
     title: "The Idea Generatorinator",
     eyebrow: "AI SKILL",
     description: "Turns a one-line problem or idea into a lean concept brief through a short, guided discovery conversation.",
