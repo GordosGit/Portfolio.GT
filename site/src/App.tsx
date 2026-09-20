@@ -55,7 +55,7 @@ function App() {
               <span>PRODUCT</span><i /> <span>ANALYSIS</span><i /> <span>AI</span><i /> <span>AUTOMATION</span>
             </div>
             <motion.p initial="hidden" animate="visible" variants={fadeUp} className="hero-mantra">
-              My operating philosophy: I turn monsters into teddy bears — breaking intimidating problems into pieces a team can actually get their arms around.
+              My operating philosophy: I turn monsters into teddy bears — breaking intimidating problems into pieces a team can actually get their arms&nbsp;around.
             </motion.p>
           </div>
 
