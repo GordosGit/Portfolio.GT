@@ -64,14 +64,14 @@ export const projects: Project[] = [
     accent: "green"
   },
   {
-    title: "Olympus",
+    title: "The Olympians",
     eyebrow: "AI SKILL",
-    description: "A six-persona adversarial review — Zeus, Athena, Hephaestus, Hermes, Apollo, and Aphrodite — that pressure-tests an idea from genuinely conflicting angles before real effort gets spent building it.",
-    problem: "A single AI response tends to converge on one balanced-sounding answer, hiding the real tensions a stakeholder group would raise.",
-    approach: "Six personas argue from one fixed bias each, surface genuine disagreement, and a verdict can be appealed and re-argued rather than just accepted.",
-    output: "A clear recommendation, the friction that mattered most, and the cheapest next step to test the biggest remaining uncertainty.",
+    description: "A twelve-god pantheon of fixed-bias personas, run in whichever mode fits the decision — a fast six-god court, the full twelve-god pantheon for high-stakes calls, a private one-on-one reading from a single god, or a quick lookup to find the right one.",
+    problem: "A single AI response tends to converge on one balanced-sounding answer, hiding the real tensions a stakeholder group would raise — and not every decision is big enough to justify a full court.",
+    approach: "Each god argues from one fixed bias only. Four modes scale the process to the decision: a default court, a full pantheon, a single god's deep counsel, or a synopsis to help pick the right one — with a verdict that can be appealed and re-argued in the two full-court modes.",
+    output: "A clear recommendation, the friction that mattered most, and the cheapest next step to test the biggest remaining uncertainty — or, in the single-god and lookup modes, focused counsel instead of a full verdict.",
     skills: ["Multi-Perspective Review", "Risk Analysis", "Decision Frameworks", "Facilitation"],
-    href: "https://github.com/GordosGit/Portfolio.GT/tree/main/skills/olympus",
+    href: "https://github.com/GordosGit/Portfolio.GT/tree/main/skills/the-olympians",
     caseStudyHref: "case-study.html?slug=pressure-testing-pocket-chef-with-olympus",
     featured: true,
     accent: "gold"

@@ -1,7 +1,7 @@
 # Pocket Chef: When the Pressure-Test Itself Needs Pressure-Testing
 
 **Role:** Product Owner / Business Analyst
-**Tools:** Claude, the-idea-generatorinator skill, Olympus (a self-designed six-persona review skill), web research
+**Tools:** Claude, the-idea-generatorinator skill, Olympus (a self-designed six-persona review skill, since renamed and expanded into The Olympians), web research
 **Type:** Idea validation / process design
 
 ## The problem
@@ -32,4 +32,4 @@ Building a tool that argues back is the easy version of this story. The harder a
 
 ## Next steps
 
-Run the ten-video manual transcript test Olympus's second Edict recommended before building anything else. Olympus itself has been updated to name this blind spot directly, so a future run at least surfaces the question rather than silently inheriting whatever scope it's handed.
+Run the ten-video manual transcript test Olympus's second Edict recommended before building anything else. Olympus itself has been updated to name this blind spot directly, so a future run at least surfaces the question rather than silently inheriting whatever scope it's handed. Since this write-up, the skill itself outgrew its original six-seat scope: it's been renamed The Olympians and now runs in four modes — the original six-god default court, a full twelve-god pantheon for higher-stakes calls, a private one-on-one "temple" reading from a single named god, and a quick roster lookup for picking the right one — with six new gods (Hera, Poseidon, Demeter, Ares, Artemis, Dionysus) added to the pantheon.

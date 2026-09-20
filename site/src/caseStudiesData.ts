@@ -116,7 +116,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Pocket Chef: When the Pressure-Test Itself Needs Pressure-Testing",
     hook: "Built my own six-persona review skill, ran a new idea through it twice — and caught the review itself faithfully arguing inside an inflated frame the whole time.",
     role: "Product Owner / Business Analyst",
-    tools: "Claude, the-idea-generatorinator skill, Olympus (a self-designed six-persona review skill), web research",
+    tools: "Claude, the-idea-generatorinator skill, Olympus (a self-designed six-persona review skill, since renamed and expanded into The Olympians), web research",
     problem: [
       "My wife and I are serial recipe-video collectors — YouTube, Facebook Shorts, Instagram, all dropped into a shared family Discord channel that we almost never go back to. I ran that problem through the-idea-generatorinator, and it came back with \"Pocket Chef\": an app that would pull in videos from all three platforms, extract the full recipe via audio transcription and on-screen text, catalog it, and let us ask for suggestions in plain language.",
       "Before building anything, I wanted it pressure-tested — but I'd already decided not to publish an existing review tool I use (a five-persona adversarial critique process) as if it were my own. That's what led to building Olympus first: my own version of the same pattern — multiple biased personas, a synthesis, an appeal mechanism — designed from scratch rather than repackaged."
@@ -162,7 +162,7 @@ export const caseStudies: CaseStudy[] = [
     whyInteresting:
       "Building a tool that argues back is the easy version of this story. The harder and more useful part is what happened after two full rounds of debate and appeal: a structured, six-perspective, deliberately adversarial process still faithfully argued inside the frame it was handed, because nothing in its design asks whether the frame itself is the problem. Catching that took a different kind of scrutiny than the process itself provides — stepping outside the debate to ask if the debate was even about the right question. That's a rarer and harder skill than running a good pressure test: noticing when a good pressure test still isn't enough.",
     nextSteps:
-      "Run the ten-video manual transcript test Olympus's second Edict recommended before building anything else. Olympus itself has been updated to name this blind spot directly, so a future run at least surfaces the question rather than silently inheriting whatever scope it's handed.",
+      "Run the ten-video manual transcript test Olympus's second Edict recommended before building anything else. Olympus itself has been updated to name this blind spot directly, so a future run at least surfaces the question rather than silently inheriting whatever scope it's handed. Since this write-up, the skill itself outgrew its original six-seat scope: it's been renamed The Olympians and now runs in four modes — the original six-god default court, a full twelve-god pantheon for higher-stakes calls, a private one-on-one \"temple\" reading from a single named god, and a quick roster lookup for picking the right one — with six new gods (Hera, Poseidon, Demeter, Ares, Artemis, Dionysus) added to the pantheon.",
     githubHref: "https://github.com/GordosGit/Portfolio.GT/blob/main/case-studies/pressure-testing-pocket-chef-with-olympus.md"
   }
 ];
