@@ -49,6 +49,7 @@ function App() {
             <motion.div initial="hidden" animate="visible" variants={fadeUp} className="hero-actions">
               <a className="button primary" href="#work">Explore the work <ArrowDown size={17} /></a>
               <a className="button ghost" href="https://github.com/GordosGit/Portfolio.GT" target="_blank" rel="noreferrer"><Github size={17} /> GitHub</a>
+              <a className="button ghost" href="https://www.linkedin.com/in/gordturner/" target="_blank" rel="noreferrer"><Linkedin size={17} /> LinkedIn</a>
             </motion.div>
             <div className="credibility">
               <span>PRODUCT</span><i /> <span>ANALYSIS</span><i /> <span>AI</span><i /> <span>AUTOMATION</span>
