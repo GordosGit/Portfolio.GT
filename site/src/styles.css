@@ -99,7 +99,7 @@ h1 span { color: var(--green-bright); }
 .project-details p { color: var(--muted); line-height: 1.6; font-size: 12px; }
 .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 25px; }
 .tags span { padding: 6px 9px; border: 1px solid var(--line); border-radius: 99px; color: #9eb0a5; font-size: 9px; }
-.project-links { position: absolute; bottom: 28px; left: 32px; right: 32px; display: flex; flex-direction: column; gap: 8px; }
+.project-links { margin-top: 28px; display: flex; flex-direction: column; gap: 8px; }
 .text-link { display: inline-flex; gap: 7px; align-items: center; color: var(--green-bright); font-size: 11px; font-weight: 800; }
 .text-link.playbook-link { margin-top: 30px; }
 .inline-link { display: inline-flex; gap: 5px; align-items: center; color: var(--green-bright); font-weight: 700; white-space: nowrap; }
