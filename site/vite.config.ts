@@ -13,7 +13,8 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "index.html"),
         playbook: resolve(__dirname, "playbook.html"),
-        caseStudies: resolve(__dirname, "case-studies.html")
+        caseStudies: resolve(__dirname, "case-studies.html"),
+        caseStudy: resolve(__dirname, "case-study.html")
       }
     }
   }

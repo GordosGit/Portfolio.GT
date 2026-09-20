@@ -29,54 +29,25 @@ function CaseStudies() {
           </p>
         </section>
 
-        <section className="section playbook-list">
-          {caseStudies.map((cs, i) => (
-            <motion.article
-              initial="hidden" whileInView="visible" viewport={{ once: true, amount: .1 }}
-              variants={fadeUp} transition={{ delay: i * .06 }}
-              className="playbook-entry" key={cs.slug} id={cs.slug}
-            >
-              <span className="eyebrow">{cs.type}</span>
-              <h2>{cs.title}</h2>
-              <div className="case-meta">
-                <span><strong>ROLE</strong> {cs.role}</span>
-                <span><strong>TOOLS</strong> {cs.tools}</span>
-              </div>
-
-              <h3 className="case-subhead">The problem</h3>
-              {cs.problem.map((p, idx) => <p className="section-lede" key={idx}>{p}</p>)}
-
-              <h3 className="case-subhead">The approach</h3>
-              <p className="section-lede">{cs.approachIntro}</p>
-              <div className="playbook-steps">
-                {cs.approachSteps.map(step => (
-                  <div className="playbook-step" key={step.label}>
-                    <span className="playbook-step-label">{step.label}</span>
-                    <p>{step.text}</p>
-                  </div>
-                ))}
-              </div>
-              <p className="section-lede case-closing">{cs.approachClosing}</p>
-
-              <h3 className="case-subhead">What the results show</h3>
-              <p className="section-lede">{cs.results}</p>
-              <ul className="case-examples">
-                {cs.examples.map((ex, idx) => <li key={idx}>{ex}</li>)}
-              </ul>
-
-              <h3 className="case-subhead">Why this is the interesting part</h3>
-              <p className="section-lede">{cs.whyInteresting}</p>
-
-              <div className="playbook-when">
-                <strong>NEXT STEPS</strong>
-                <p>{cs.nextSteps}</p>
-              </div>
-
-              <a className="text-link playbook-link" href={cs.githubHref} target="_blank" rel="noreferrer">
-                Read the full write-up on GitHub <ArrowUpRight size={14} />
-              </a>
-            </motion.article>
-          ))}
+        <section className="section case-index-section">
+          <div className="case-index-grid">
+            {caseStudies.map((cs, i) => (
+              <motion.a
+                initial="hidden" whileInView="visible" viewport={{ once: true, amount: .15 }}
+                variants={fadeUp} transition={{ delay: i * .08 }}
+                className="case-index-card" key={cs.slug}
+                href={`case-study.html?slug=${cs.slug}`}
+              >
+                <span className="eyebrow">{cs.type}</span>
+                <h3>{cs.title}</h3>
+                <p className="case-index-hook">{cs.hook}</p>
+                <div className="case-meta">
+                  <span><strong>ROLE</strong> {cs.role}</span>
+                </div>
+                <span className="text-link case-index-cta">Read the case study <ArrowUpRight size={14} /></span>
+              </motion.a>
+            ))}
+          </div>
         </section>
 
         <section className="section contact" id="contact">

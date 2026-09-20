@@ -2,6 +2,7 @@ export type CaseStudy = {
   slug: string;
   type: string;
   title: string;
+  hook: string;
   role: string;
   tools: string;
   problem: string[];
@@ -20,6 +21,7 @@ export const caseStudies: CaseStudy[] = [
     slug: "ai-assisted-job-application-pipeline",
     type: "Personal Workflow Automation",
     title: "Building a Repeatable Evaluation Pipeline for Job Applications",
+    hook: "A gated, self-correcting pipeline that stops a weak match from getting a cover letter written for it — and gets stricter every time it catches its own mistake.",
     role: "Product Owner / Business Analyst",
     tools: "Claude, a custom fit-analysis skill, a persistent knowledge base of resume/voice/strengths documents",
     problem: [
@@ -65,6 +67,7 @@ export const caseStudies: CaseStudy[] = [
     slug: "idea-validation-sunday-dinner",
     type: "Idea Validation / Concept Development",
     title: "Sunday Dinner: A Concept Brief That Didn't Survive Its Own Review",
+    hook: "A concept brief that read as fully-formed on the first pass — until an adversarial review found the real risk was untested, not that the idea itself was bad.",
     role: "Product Owner / Business Analyst",
     tools: "Claude, the Idea Generatorinator skill, a five-persona adversarial review process (\"the Council\")",
     problem: [
@@ -111,6 +114,7 @@ export const caseStudies: CaseStudy[] = [
     slug: "pressure-testing-pocket-chef-with-olympus",
     type: "Idea Validation / Process Design",
     title: "Pocket Chef: When the Pressure-Test Itself Needs Pressure-Testing",
+    hook: "Built my own six-persona review skill, ran a new idea through it twice — and caught the review itself faithfully arguing inside an inflated frame the whole time.",
     role: "Product Owner / Business Analyst",
     tools: "Claude, the-idea-generatorinator skill, Olympus (a self-designed six-persona review skill), web research",
     problem: [

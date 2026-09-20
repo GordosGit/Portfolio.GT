@@ -144,6 +144,14 @@ h1 span { color: var(--green-bright); }
 .case-examples { margin: 16px 0 0; padding-left: 20px; color: var(--muted); font-size: 13px; line-height: 1.7; }
 .case-examples li { margin-bottom: 8px; }
 .case-closing { font-style: italic; color: #9bb2a4; }
+.case-index-section { padding-top: 0; }
+.case-index-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px; }
+.case-index-card { display: flex; flex-direction: column; padding: 34px; background: linear-gradient(145deg, rgba(16,31,22,.95), rgba(8,17,12,.98)); border: 1px solid var(--line); border-radius: 8px; transition: background .2s, transform .2s, border-color .2s; }
+.case-index-card:hover { background: var(--panel-2); border-color: rgba(123,229,161,.35); transform: translateY(-3px); }
+.case-index-card h3 { margin: 12px 0 14px; font-size: 24px; letter-spacing: -.03em; line-height: 1.15; }
+.case-index-hook { margin: 0; color: #c3d0c8; font-size: 13.5px; line-height: 1.7; flex-grow: 1; }
+.case-index-card .case-meta { margin-top: 22px; }
+.case-index-cta { margin-top: 20px; }
 .contact { padding-bottom: 80px; }
 .contact-card { text-align: center; padding: 90px 30px; border: 1px solid rgba(123,229,161,.22); background: radial-gradient(circle at center, rgba(86,201,130,.1), transparent 52%), var(--panel); }
 .contact-card h2 { margin: 15px auto; max-width: 700px; font-size: clamp(36px, 5vw, 58px); letter-spacing: -.045em; }

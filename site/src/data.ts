@@ -46,7 +46,7 @@ export const projects: Project[] = [
     output: "Problem, solution, audience, differentiation, and risks.",
     skills: ["Discovery", "Requirements", "Prompt Design", "Structured Thinking"],
     href: "https://github.com/GordosGit/Portfolio.GT/tree/main/skills/the-idea-generatorinator",
-    caseStudyHref: "case-studies.html#idea-validation-sunday-dinner",
+    caseStudyHref: "case-study.html?slug=idea-validation-sunday-dinner",
     featured: true,
     accent: "gold"
   },
@@ -59,7 +59,7 @@ export const projects: Project[] = [
     output: "A structured fit analysis with gaps and application guidance.",
     skills: ["Gap Analysis", "Evidence Mapping", "Evaluation", "Career Workflow"],
     href: "https://github.com/GordosGit/Portfolio.GT/tree/main/skills/job-fit-analyzerinator",
-    caseStudyHref: "case-studies.html#ai-assisted-job-application-pipeline",
+    caseStudyHref: "case-study.html?slug=ai-assisted-job-application-pipeline",
     featured: true,
     accent: "green"
   },
@@ -72,7 +72,7 @@ export const projects: Project[] = [
     output: "A clear recommendation, the friction that mattered most, and the cheapest next step to test the biggest remaining uncertainty.",
     skills: ["Multi-Perspective Review", "Risk Analysis", "Decision Frameworks", "Facilitation"],
     href: "https://github.com/GordosGit/Portfolio.GT/tree/main/skills/olympus",
-    caseStudyHref: "case-studies.html#pressure-testing-pocket-chef-with-olympus",
+    caseStudyHref: "case-study.html?slug=pressure-testing-pocket-chef-with-olympus",
     featured: true,
     accent: "gold"
   }
