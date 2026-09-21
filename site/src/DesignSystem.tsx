@@ -143,6 +143,23 @@ function DesignSystem() {
           </div>
         </section>
 
+        <section className="section" id="provenance">
+          <div className="sec-head">
+            <span className="num">// 05</span>
+            <h2>Provenance</h2>
+          </div>
+          <div style={{ maxWidth: 360, marginBottom: 24 }}>
+            <aside className="operator">
+              <div className="field name-row"><span className="k">Directed by</span><span className="v">Gord Turner</span></div>
+              <div className="field"><span className="k">Built with</span><span className="v accent">Claude (Anthropic)</span></div>
+              <div className="field"><span className="k">Method</span><span className="v">Human direction, AI-assisted execution</span></div>
+            </aside>
+          </div>
+          <p className="section-lede">
+            This system was directed and product-owned by me — the palette, the mood, the rules for what each accent color is allowed to mean — and built in collaboration with Claude, working from a visual mockup I supplied. Every token, component, and page here went through the same loop I use on client work: I set direction and made the calls, AI did the drafting and iteration. Full story in the case study below.
+          </p>
+        </section>
+
         <section className="section contact" id="contact">
           <div className="contact-card">
             <div className="eyebrow">// OPEN CHANNEL</div>
