@@ -19,7 +19,6 @@ function pad3(n: number) {
  */
 function SiteHeader({ navItems }: Props) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [clock, setClock] = useState("--:--:--");
   const [hdg, setHdg] = useState("047°");
   const [vel, setVel] = useState("128 kts");
   const [alt, setAlt] = useState("320 m");
@@ -28,15 +27,7 @@ function SiteHeader({ navItems }: Props) {
   useEffect(() => {
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    function tick() {
-      const d = new Date();
-      const p = (n: number) => String(n).padStart(2, "0");
-      setClock(`${p(d.getHours())}:${p(d.getMinutes())}:${p(d.getSeconds())}`);
-    }
-    tick();
-    const clockId = window.setInterval(tick, 1000);
-
-    if (reduceMotion) return () => window.clearInterval(clockId);
+    if (reduceMotion) return;
 
     let hdgVal = 47, velVal = 128, altVal = 320;
     function drift() {
@@ -65,7 +56,6 @@ function SiteHeader({ navItems }: Props) {
     const pwrId = window.setInterval(updatePower, 1400);
 
     return () => {
-      window.clearInterval(clockId);
       window.clearInterval(driftId);
       window.clearInterval(pwrId);
     };
@@ -80,7 +70,6 @@ function SiteHeader({ navItems }: Props) {
             <a className="name" href="index.html">Gord Turner</a>
             <span className="role">Senior PO · BSA · Applied AI</span>
           </div>
-          <span className="status">Online</span>
         </div>
 
         <nav className="hud-nav" aria-label="Primary">
@@ -88,7 +77,6 @@ function SiteHeader({ navItems }: Props) {
             <a key={item.label} href={item.href}>{item.label}</a>
           ))}
         </nav>
-        <span className="clock">{clock}</span>
 
         <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation">
           {menuOpen ? <X size={19} /> : <Menu size={19} />}
