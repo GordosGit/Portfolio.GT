@@ -1,78 +1,73 @@
 import { motion } from "framer-motion";
-import { ArrowDown, ArrowUpRight, BrainCircuit, BriefcaseBusiness, CheckCircle2, ExternalLink, Github, Linkedin, Mail, Menu, X } from "lucide-react";
-import { useState } from "react";
+import { ArrowDown, ArrowUpRight, BriefcaseBusiness, CheckCircle2, Github, Linkedin, Mail } from "lucide-react";
 import { experience, projects } from "./data";
+import SiteChrome from "./components/SiteChrome";
+import SiteHeader from "./components/SiteHeader";
+import VoightKampff from "./components/VoightKampff";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 22 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.55 } }
 };
 
-function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
+const NAV_ITEMS = [
+  { label: "Work", href: "#work" },
+  { label: "Approach", href: "#approach" },
+  { label: "Strengths", href: "#strengths" },
+  { label: "Experience", href: "#experience" },
+  { label: "Case Studies", href: "case-studies.html" },
+  { label: "Playbook", href: "playbook.html" },
+  { label: "Contact", href: "#contact" }
+];
 
+function App() {
   return (
     <div className="site-shell">
-      <header className="nav">
-        <a className="brand" href="#top" aria-label="Gord Turner home">
-          <span className="brand-mark">G</span>
-          <span>GORD TURNER</span>
-        </a>
-
-        <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation">
-          {menuOpen ? <X size={21} /> : <Menu size={21} />}
-        </button>
-
-        <nav className={menuOpen ? "nav-links open" : "nav-links"}>
-          <a href="#work" onClick={() => setMenuOpen(false)}>Work</a>
-          <a href="#approach" onClick={() => setMenuOpen(false)}>Approach</a>
-          <a href="#strengths" onClick={() => setMenuOpen(false)}>Strengths</a>
-          <a href="#experience" onClick={() => setMenuOpen(false)}>Experience</a>
-          <a href="case-studies.html">Case Studies</a>
-          <a href="playbook.html">Playbook</a>
-          <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
-        </nav>
-      </header>
+      <SiteChrome />
+      <SiteHeader navItems={NAV_ITEMS} />
 
       <main id="top">
-        <section className="hero section">
+        <section className="hero" id="hero">
           <div className="hero-copy">
             <motion.div initial="hidden" animate="visible" variants={fadeUp} className="eyebrow">
-              <span className="pulse-dot" /> APPLIED AI PORTFOLIO
+              APPLIED AI · PRODUCT SYSTEMS
+            </motion.div>
+            <motion.div initial="hidden" animate="visible" variants={fadeUp} className="name-lockup">
+              <span className="n">Gord Turner</span>
+              <span className="r">Senior Product Owner · Business Analyst</span>
             </motion.div>
             <motion.h1 initial="hidden" animate="visible" variants={fadeUp}>
-              Turning ambiguous problems into <span>structured AI workflows.</span>
+              Turning ambiguous problems into <span>structured AI workflows</span>.
             </motion.h1>
             <motion.p initial="hidden" animate="visible" variants={fadeUp} className="hero-text">
-              I’m <span className="name-accent">Gord Turner</span> — a Senior Product Owner and Business Analyst building practical AI tools that formalize the analytical work behind good product decisions.
+              I build practical AI tools that formalize the analytical work behind good product decisions — turning monsters into teddy bears, one framework at a time.
             </motion.p>
             <motion.div initial="hidden" animate="visible" variants={fadeUp} className="hero-actions">
-              <a className="button primary" href="#work">Explore the work <ArrowDown size={17} /></a>
-              <a className="button ghost" href="https://github.com/GordosGit/Portfolio.GT" target="_blank" rel="noreferrer"><Github size={17} /> GitHub</a>
-              <a className="button ghost" href="https://www.linkedin.com/in/gordturner/" target="_blank" rel="noreferrer"><Linkedin size={17} /> LinkedIn</a>
+              <a className="button primary" href="#work">Explore the work <ArrowDown size={15} /></a>
+              <a className="button ghost" href="https://github.com/GordosGit/Portfolio.GT" target="_blank" rel="noreferrer"><Github size={15} /> GitHub</a>
+              <a className="button ghost" href="https://www.linkedin.com/in/gordturner/" target="_blank" rel="noreferrer"><Linkedin size={15} /> LinkedIn</a>
             </motion.div>
-            <div className="credibility">
-              <span>PRODUCT</span><i /> <span>ANALYSIS</span><i /> <span>AI</span><i /> <span>AUTOMATION</span>
+            <div className="tags">
+              <span className="tag">PRODUCT ANALYSIS</span>
+              <span className="tag amber">AI AUTOMATION</span>
+              <span className="tag">WORKFLOW DESIGN</span>
             </div>
             <motion.p initial="hidden" animate="visible" variants={fadeUp} className="hero-mantra">
               My operating philosophy: I turn monsters into teddy bears — breaking intimidating problems into pieces a team can actually get their arms&nbsp;around.
             </motion.p>
           </div>
 
-          <motion.div initial={{ opacity: 0, scale: .96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: .8 }} className="hero-orbit">
-            <div className="orbit orbit-one" />
-            <div className="orbit orbit-two" />
-            <div className="orbit-core"><BrainCircuit size={48} strokeWidth={1.25} /></div>
-            <span className="orbit-label label-one">DISCOVER</span>
-            <span className="orbit-label label-two">STRUCTURE</span>
-            <span className="orbit-label label-three">AUTOMATE</span>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .8 }}>
+            <VoightKampff />
           </motion.div>
         </section>
 
         <section className="section manifesto" id="approach">
           <div className="section-heading">
-            <div className="eyebrow">THE THROUGH-LINE</div>
-            <h2>Turning monsters into teddy bears.</h2>
+            <div className="sec-head">
+              <span className="num">// 01</span>
+              <h2>Turning monsters into teddy bears.</h2>
+            </div>
             <p className="section-lede">Every intimidating problem — a blank slate, a stalled migration, a vague ask — gets the same treatment: isolate what's actually being asked, strip out the noise, and break it into pieces a team can act on with confidence. Here's how that plays out in practice:</p>
           </div>
           <div className="manifesto-grid">
@@ -82,7 +77,7 @@ function App() {
               ["03", "Evaluate", "Make AI output useful by checking it against requirements instead of treating generation as the finish line."],
               ["04", "Automate", "Package proven workflows into agents and tools that can run consistently without reinventing the process."]
             ].map(([num, title, text]) => (
-              <motion.article whileHover={{ y: -5 }} key={num} className="principle">
+              <motion.article whileHover={{ y: -4 }} key={num} className="principle">
                 <span className="principle-number">{num}</span>
                 <h3>{title}</h3>
                 <p>{text}</p>
@@ -118,51 +113,50 @@ function App() {
         <section className="section work-section" id="work">
           <div className="section-heading split-heading">
             <div>
-              <div className="eyebrow">SELECTED WORK</div>
-              <h2>Show, not tell.</h2>
+              <div className="sec-head">
+                <span className="num">// 02</span>
+                <h2>Show, not tell.</h2>
+                <span className="meta">{projects.length} records · verified</span>
+              </div>
             </div>
-            <p>
-              Working AI skills and agents from my portfolio repo — built around real product and business analysis patterns.{" "}
-              <a className="inline-link" href="case-studies.html">Want the deeper story on one? Read the case studies <ArrowUpRight size={13} /></a>
-            </p>
           </div>
+          <p className="section-lede" style={{ marginBottom: 8 }}>
+            Working AI skills and agents from my portfolio repo — built around real product and business analysis patterns.{" "}
+            <a className="inline-link" href="case-studies.html">Want the deeper story on one? Read the case studies <ArrowUpRight size={13} /></a>
+          </p>
 
-          <div className="projects">
-            {projects.map((project, index) => (
-              <motion.article
-                initial="hidden" whileInView="visible" viewport={{ once: true, amount: .15 }}
-                variants={fadeUp} transition={{ delay: index * .08 }}
-                className={`project-card ${project.featured ? "featured" : ""}`}
-                key={project.title}
-              >
-                <div className={`project-icon ${project.accent}`}><BrainCircuit size={24} /></div>
-                <div className="project-topline">
-                  <span className="eyebrow">{project.eyebrow}</span>
-                  <a href={project.href} target="_blank" rel="noreferrer" aria-label={`Open ${project.title} on GitHub`}><ArrowUpRight size={20} /></a>
-                </div>
-                <h3>{project.title}</h3>
-                <p className="project-description">{project.description}</p>
-                <div className="project-details">
-                  <div><strong>PROBLEM</strong><p>{project.problem}</p></div>
-                  <div><strong>APPROACH</strong><p>{project.approach}</p></div>
-                  <div><strong>OUTPUT</strong><p>{project.output}</p></div>
-                </div>
-                <div className="tags">{project.skills.map(skill => <span key={skill}>{skill}</span>)}</div>
-                <div className="project-links">
-                  <a className="text-link" href={project.href} target="_blank" rel="noreferrer">View on GitHub <ExternalLink size={14} /></a>
-                  {project.caseStudyHref && (
-                    <a className="text-link" href={project.caseStudyHref}>Read the case study <ArrowUpRight size={14} /></a>
-                  )}
-                </div>
-              </motion.article>
-            ))}
+          <div className="cards">
+            {projects.map((project, index) => {
+              const typeClass = project.chain ? "chain" : project.kind === "Autonomous Agent" ? "agent" : "";
+              return (
+                <motion.article
+                  initial="hidden" whileInView="visible" viewport={{ once: true, amount: .15 }}
+                  variants={fadeUp} transition={{ delay: index * .06 }}
+                  className={`card ${project.spanFull ? "span-full" : ""}`}
+                  key={project.title}
+                >
+                  <div className={`type ${typeClass}`}><span className="led" />{project.kind}</div>
+                  <h3>{project.title}</h3>
+                  <div className="field-row"><span className="k">Problem</span><span className="v">{project.problem}</span></div>
+                  <div className="field-row"><span className="k">Approach</span><span className="v">{project.approach}</span></div>
+                  <div className="field-row"><span className="k">Output</span><span className="v">{project.output}</span></div>
+                  <div className="tags">{project.skills.map(skill => <span key={skill} className="tag">{skill}</span>)}</div>
+                  <div className="action-row">
+                    <a className="action" href={project.href} target="_blank" rel="noreferrer">View on GitHub</a>
+                    {project.caseStudyHref && (
+                      <a className="action" href={project.caseStudyHref}>Read case study</a>
+                    )}
+                  </div>
+                </motion.article>
+              );
+            })}
           </div>
         </section>
 
         <section className="section architecture">
           <div className="architecture-panel">
-            <div className="section-heading">
-              <div className="eyebrow">MY AI DESIGN PATTERN</div>
+            <div className="sec-head">
+              <span className="num">// 03</span>
               <h2>From vague ask to actionable output.</h2>
             </div>
             <div className="flow">
@@ -179,15 +173,17 @@ function App() {
 
         <section className="section about-grid">
           <div>
-            <div className="eyebrow">THE BACKGROUND</div>
-            <h2>Product thinking, business analysis, and applied AI.</h2>
+            <div className="sec-head">
+              <span className="num">// 04</span>
+              <h2>Product thinking, business analysis, and applied AI.</h2>
+            </div>
           </div>
           <div className="about-copy">
-            <p>I’ve spent my career bridging business needs and technical delivery — shaping product direction, eliciting requirements, mapping workflows, managing trade-offs, and helping teams turn ambiguity into something buildable.</p>
+            <p>I've spent my career bridging business needs and technical delivery — shaping product direction, eliciting requirements, mapping workflows, managing trade-offs, and helping teams turn ambiguity into something buildable.</p>
             <p>My AI work is an extension of that practice. Rather than treating AI as a separate skill, I use it to encode repeatable analytical processes into tools, skills, and agents.</p>
             <div className="capability-list">
               {["Product vision & roadmaps", "Requirements & discovery", "Gap & root-cause analysis", "AI-assisted development", "Prompt & spec-driven design", "Agents & workflow automation"].map(x =>
-                <span key={x}><CheckCircle2 size={15} /> {x}</span>
+                <span key={x}><CheckCircle2 size={14} /> {x}</span>
               )}
             </div>
           </div>
@@ -195,8 +191,11 @@ function App() {
 
         <section className="section strengths-section" id="strengths">
           <div className="section-heading">
-            <div className="eyebrow">HOW I'M WIRED</div>
-            <h2>Natural strengths, applied.</h2>
+            <div className="sec-head">
+              <span className="num">// 05</span>
+              <h2>Natural strengths, applied.</h2>
+              <span className="meta">Top 5 · CliftonStrengths</span>
+            </div>
             <p className="section-lede">My CliftonStrengths Top 5 — not learned skills, but the patterns I default to under pressure. Here's each one showing up in real work.</p>
           </div>
           <div className="strengths-grid">
@@ -209,7 +208,7 @@ function App() {
             ].map(([num, title, blurb, proof]) => (
               <motion.article
                 initial="hidden" whileInView="visible" viewport={{ once: true, amount: .15 }}
-                variants={fadeUp} whileHover={{ y: -5 }}
+                variants={fadeUp} whileHover={{ y: -4 }}
                 className="strength-card" key={num}
               >
                 <span className="principle-number">{num}</span>
@@ -223,13 +222,16 @@ function App() {
 
         <section className="section experience-section" id="experience">
           <div className="section-heading">
-            <div className="eyebrow">EXPERIENCE</div>
-            <h2>A career built around making complexity understandable.</h2>
+            <div className="sec-head">
+              <span className="num">// 06</span>
+              <h2>A career built around making complexity understandable.</h2>
+              <span className="meta">{experience.length} roles</span>
+            </div>
           </div>
           <div className="timeline">
             {experience.map((item, i) => (
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} transition={{ delay: i * .08 }} className="timeline-item" key={item.company}>
-                <div className="timeline-marker"><BriefcaseBusiness size={15} /></div>
+                <div className="timeline-marker"><BriefcaseBusiness size={14} /></div>
                 <div className="timeline-content">
                   <span className="dates">{item.dates}</span>
                   <h3>{item.role}</h3>
@@ -243,21 +245,21 @@ function App() {
 
         <section className="section contact" id="contact">
           <div className="contact-card">
-            <div className="eyebrow">LET'S TALK</div>
+            <div className="eyebrow">// OPEN CHANNEL</div>
             <h2>Interested in what I can build with your team?</h2>
-            <p>For product, business analysis, AI workflow, or applied AI opportunities, I’d be happy to talk.</p>
+            <p>For product, business analysis, AI workflow, or applied AI opportunities, I'd be happy to talk.</p>
             <div className="contact-actions">
-              <a className="button primary" href="mailto:gord.turner@gmail.com"><Mail size={17} /> Email me</a>
-              <a className="button ghost" href="https://www.linkedin.com/in/gordturner/" target="_blank" rel="noreferrer"><Linkedin size={17} /> LinkedIn</a>
-              <a className="button ghost" href="https://github.com/GordosGit" target="_blank" rel="noreferrer"><Github size={17} /> GitHub</a>
+              <a className="button primary" href="mailto:gord.turner@gmail.com"><Mail size={15} /> Email me</a>
+              <a className="button ghost" href="https://www.linkedin.com/in/gordturner/" target="_blank" rel="noreferrer"><Linkedin size={15} /> LinkedIn</a>
+              <a className="button ghost" href="https://github.com/GordosGit" target="_blank" rel="noreferrer"><Github size={15} /> GitHub</a>
             </div>
           </div>
         </section>
       </main>
 
       <footer className="footer">
-        <span>© {new Date().getFullYear()} Gord Turner</span>
-        <span>Applied AI · Product · Analysis</span>
+        <span>© {new Date().getFullYear()} Gord Turner — Applied AI Portfolio</span>
+        <span>NODE 07 · REV 3.0</span>
       </footer>
     </div>
   );

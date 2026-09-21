@@ -1,27 +1,31 @@
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
 import { caseStudies } from "./caseStudiesData";
+import SiteChrome from "./components/SiteChrome";
+import SiteHeader from "./components/SiteHeader";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 22 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.55 } }
 };
 
+const NAV_ITEMS = [
+  { label: "Home", href: "index.html" },
+  { label: "Work", href: "index.html#work" },
+  { label: "Case Studies", href: "case-studies.html" },
+  { label: "Playbook", href: "playbook.html" },
+  { label: "Contact", href: "index.html#contact" }
+];
+
 function CaseStudies() {
   return (
     <div className="site-shell">
-      <header className="nav">
-        <a className="brand" href="index.html" aria-label="Gord Turner home">
-          <span className="brand-mark">G</span>
-          <span>GORD TURNER</span>
-        </a>
-        <nav className="nav-links">
-          <a href="index.html"><ArrowLeft size={14} style={{ verticalAlign: "-2px", marginRight: "6px" }} />Back to portfolio</a>
-        </nav>
-      </header>
+      <SiteChrome />
+      <SiteHeader navItems={NAV_ITEMS} />
 
       <main>
         <section className="section playbook-hero">
+          <a className="back-link" href="index.html"><ArrowLeft size={13} /> Back to portfolio</a>
           <div className="eyebrow">DEEPER DIVES</div>
           <h1>Case Studies.</h1>
           <p className="hero-text">
@@ -38,7 +42,7 @@ function CaseStudies() {
                 className="case-index-card" key={cs.slug}
                 href={`case-study.html?slug=${cs.slug}`}
               >
-                <span className="eyebrow">{cs.type}</span>
+                <div className="type"><span className="led" />{cs.type}</div>
                 <h3>{cs.title}</h3>
                 <p className="case-index-hook">{cs.hook}</p>
                 <div className="case-meta">
@@ -52,21 +56,21 @@ function CaseStudies() {
 
         <section className="section contact" id="contact">
           <div className="contact-card">
-            <div className="eyebrow">LET'S TALK</div>
+            <div className="eyebrow">// OPEN CHANNEL</div>
             <h2>Interested in what I can build with your team?</h2>
-            <p>For product, business analysis, AI workflow, or applied AI opportunities, I’d be happy to talk.</p>
+            <p>For product, business analysis, AI workflow, or applied AI opportunities, I'd be happy to talk.</p>
             <div className="contact-actions">
-              <a className="button primary" href="mailto:gord.turner@gmail.com"><Mail size={17} /> Email me</a>
-              <a className="button ghost" href="https://www.linkedin.com/in/gordturner/" target="_blank" rel="noreferrer"><Linkedin size={17} /> LinkedIn</a>
-              <a className="button ghost" href="https://github.com/GordosGit" target="_blank" rel="noreferrer"><Github size={17} /> GitHub</a>
+              <a className="button primary" href="mailto:gord.turner@gmail.com"><Mail size={15} /> Email me</a>
+              <a className="button ghost" href="https://www.linkedin.com/in/gordturner/" target="_blank" rel="noreferrer"><Linkedin size={15} /> LinkedIn</a>
+              <a className="button ghost" href="https://github.com/GordosGit" target="_blank" rel="noreferrer"><Github size={15} /> GitHub</a>
             </div>
           </div>
         </section>
       </main>
 
       <footer className="footer">
-        <span>© {new Date().getFullYear()} Gord Turner</span>
-        <span>Applied AI · Product · Analysis</span>
+        <span>© {new Date().getFullYear()} Gord Turner — Applied AI Portfolio</span>
+        <span>NODE 07 · REV 3.0</span>
       </footer>
     </div>
   );
