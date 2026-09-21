@@ -17,6 +17,7 @@ const NAV_ITEMS = [
   { label: "Experience", href: "#experience" },
   { label: "Case Studies", href: "case-studies.html" },
   { label: "Playbook", href: "playbook.html" },
+  { label: "Design System", href: "design-system.html" },
   { label: "Contact", href: "#contact" }
 ];
 

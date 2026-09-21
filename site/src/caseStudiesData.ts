@@ -164,5 +164,51 @@ export const caseStudies: CaseStudy[] = [
     nextSteps:
       "Run the ten-video manual transcript test Olympus's second Edict recommended before building anything else. Olympus itself has been updated to name this blind spot directly, so a future run at least surfaces the question rather than silently inheriting whatever scope it's handed. Since this write-up, the skill itself outgrew its original six-seat scope: it's been renamed The Olympians and now runs in four modes — the original six-god default court, a full twelve-god pantheon for higher-stakes calls, a private one-on-one \"temple\" reading from a single named god, and a quick roster lookup for picking the right one — with six new gods (Hera, Poseidon, Demeter, Ares, Artemis, Dionysus) added to the pantheon.",
     githubHref: "https://github.com/GordosGit/Portfolio.GT/blob/main/case-studies/pressure-testing-pocket-chef-with-olympus.md"
+  },
+  {
+    slug: "systemizing-a-personal-brand",
+    type: "Design Systems / Brand Infrastructure",
+    title: "From a Mockup to a Governed Design System",
+    hook: "A one-off visual redesign turned into portable tokens, a living style guide, and a Claude skill — so every future deck or mockup for the brand starts consistent instead of re-deriving the rules from scratch.",
+    role: "Product Owner / Business Analyst",
+    tools: "Claude (Cowork), CSS custom properties, a portable component library, a Claude Skill",
+    problem: [
+      "I redesigned this portfolio around a single HTML mockup I'd put together — a Blade Runner-inspired \"cockpit\" aesthetic with a very specific palette, typography, and set of interaction patterns. Claude rebuilt the whole site to match it faithfully. That solved the immediate problem: the site looked like one coherent thing instead of a template with my name on it.",
+      "But a one-off visual mockup is a mood board, not infrastructure. The moment I needed a second artifact in the same voice — a presentation, a quick mockup for an idea, a one-pager — I'd either have to dig through the site's source to find the exact amber hex code and font stack again, or accept visual drift the second time I built something. Neither is a real answer for a personal brand I intend to keep using."
+    ],
+    approachIntro:
+      "I treated the finished site itself as raw material for a system, not as the end of the project. The work broke into four pieces:",
+    approachSteps: [
+      {
+        label: "1. Extract the tokens.",
+        text: "Pulled the palette, type scale, and the recurring UI patterns — panel borders, LED-dot category markers, dashed field-rows, the \"// 0N\" section numbering — out of the finished site's stylesheet into a framework-free tokens.css and a living style-guide.html that renders every component with usage notes. No React, no build step: it works as a plain stylesheet link in any HTML file."
+      },
+      {
+        label: "2. Separate the system from the site's own chrome.",
+        text: "The site has extras that are specific to it — a sticky HUD header with fake live telemetry, a cursor-tracking eye, canvas rain and film grain, a rotating kanji strip. Those stayed site-only rather than getting baked into the base tokens, so a quick deck doesn't inherit machinery it doesn't need."
+      },
+      {
+        label: "3. Encode it as a skill, not a memory.",
+        text: "A design system that only lives in my head, or in a conversation Claude and I already had, doesn't survive to the next session. I had Claude package the tokens, the components, and the usage rules — including a standing rule that presentations get built as HTML, not PowerPoint — into a Claude skill, so a future request to build something for the brand applies the system automatically instead of me re-explaining it."
+      },
+      {
+        label: "4. Publish it in both places I actually work.",
+        text: "The system now lives in the portfolio repo (for the site itself and anyone who wants to see it), in my tools repo alongside my other reusable skills and agents (for reuse across projects), and as a public page on the live site — so the site doesn't just use the system, it argues for having built one."
+      }
+    ],
+    approachClosing:
+      "The deliverable wasn't a better-looking site. It was a system a future collaborator — including a future instance of Claude with no memory of this conversation — could pick up and apply correctly without re-deriving the rules each time.",
+    results:
+      "The design system folder ships two files (tokens.css, style-guide.html) that any standalone HTML deliverable can drop in and match the site exactly, plus a Claude skill that's already scoped to apply automatically to presentations, mockups, and one-pagers for the brand — including the standing rule that presentations are HTML, not PowerPoint.",
+    examples: [
+      "A public Design System page on the live site documenting color, type, and every recurring component with usage notes — proof of the system, not just a private reference.",
+      "A portable tokens.css that needs no build tooling — any new HTML file can link it and inherit the exact palette and components.",
+      "A Claude skill that applies the rules automatically to future work, instead of relying on me to re-describe the brand every time."
+    ],
+    whyInteresting:
+      "A Product Owner's job doesn't end when one thing ships well. It's making sure the next ten things don't each reinvent the rules, and making that consistency someone else's job — a teammate's, a contractor's, or in this case an AI's — rather than something only I can hold in my head. Turning a good-looking redesign into governed, reusable infrastructure is the same discipline I'd apply to a product's design system at work; I just applied it to my own brand first.",
+    nextSteps:
+      "A ready-to-duplicate slide-deck template with the section/pagination scaffolding pre-wired, so starting a new HTML presentation is a copy-paste instead of a blank file.",
+    githubHref: "https://github.com/GordosGit/Portfolio.GT/tree/main/design-system"
   }
 ];
