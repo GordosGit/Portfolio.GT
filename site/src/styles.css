@@ -136,8 +136,8 @@ body::after {
 .hud .name-block { display: flex; align-items: baseline; gap: 12px; min-width: 0; }
 .hud .name {
   font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.01em;
-  color: var(--neon-pink); text-transform: none;
-  text-shadow: 0 0 6px rgba(255, 60, 138, 0.5), 0 0 16px rgba(255, 60, 138, 0.28);
+  color: var(--cyan); text-transform: none;
+  text-shadow: 0 0 6px rgba(127, 212, 212, 0.5), 0 0 16px rgba(127, 212, 212, 0.28);
   white-space: nowrap;
 }
 .hud .role { font-size: 10px; letter-spacing: 0.2em; color: var(--bone-dim); text-transform: uppercase; white-space: nowrap; }
