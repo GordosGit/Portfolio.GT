@@ -70,7 +70,6 @@ body::after {
   z-index: 9998;
   mix-blend-mode: overlay;
 }
-#neon-reflection { position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: 0.6; mix-blend-mode: screen; }
 #rain { position: fixed; inset: 0; z-index: 2; pointer-events: none; opacity: 0.5; mix-blend-mode: screen; }
 #skyline { position: fixed; left: 0; right: 0; bottom: 0; height: 40vh; z-index: 1; pointer-events: none; opacity: 0.45; }
 #grain { position: fixed; inset: 0; z-index: 9997; pointer-events: none; opacity: 0.06; mix-blend-mode: overlay; }
