@@ -1,15 +1,6 @@
 import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
 import SiteChrome from "./components/SiteChrome";
-import SiteHeader from "./components/SiteHeader";
-
-const NAV_ITEMS = [
-  { label: "Home", href: "index.html" },
-  { label: "Work", href: "index.html#work" },
-  { label: "Case Studies", href: "case-studies.html" },
-  { label: "Playbook", href: "playbook.html" },
-  { label: "Design System", href: "design-system.html" },
-  { label: "Contact", href: "index.html#contact" }
-];
+import SiteHeader, { SITE_NAV_ITEMS } from "./components/SiteHeader";
 
 const SWATCHES = [
   { name: "Void", varName: "--void", hex: "#08080a" },
@@ -26,7 +17,7 @@ function DesignSystem() {
   return (
     <div className="site-shell">
       <SiteChrome />
-      <SiteHeader navItems={NAV_ITEMS} />
+      <SiteHeader navItems={SITE_NAV_ITEMS} />
 
       <main>
         <section className="section playbook-hero">

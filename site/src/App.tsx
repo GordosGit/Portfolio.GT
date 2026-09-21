@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowDown, ArrowUpRight, BriefcaseBusiness, CheckCircle2, Github, Linkedin, Mail } from "lucide-react";
 import { experience, projects } from "./data";
 import SiteChrome from "./components/SiteChrome";
-import SiteHeader from "./components/SiteHeader";
+import SiteHeader, { SITE_NAV_ITEMS } from "./components/SiteHeader";
 import VoightKampff from "./components/VoightKampff";
 
 const fadeUp = {
@@ -10,22 +10,11 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.55 } }
 };
 
-const NAV_ITEMS = [
-  { label: "Work", href: "#work" },
-  { label: "Approach", href: "#approach" },
-  { label: "Strengths", href: "#strengths" },
-  { label: "Experience", href: "#experience" },
-  { label: "Case Studies", href: "case-studies.html" },
-  { label: "Playbook", href: "playbook.html" },
-  { label: "Design System", href: "design-system.html" },
-  { label: "Contact", href: "#contact" }
-];
-
 function App() {
   return (
     <div className="site-shell">
       <SiteChrome />
-      <SiteHeader navItems={NAV_ITEMS} />
+      <SiteHeader navItems={SITE_NAV_ITEMS} />
 
       <main id="top">
         <section className="hero" id="hero">

@@ -7,6 +7,24 @@ type Props = {
   navItems: NavItem[];
 };
 
+/**
+ * Single source of truth for primary nav, shared by every page so the
+ * header is identical site-wide. Section anchors always target index.html
+ * explicitly (not bare "#work") so they work correctly from any page —
+ * including the home page itself, where same-document hash navigation
+ * still just scrolls rather than reloading.
+ */
+export const SITE_NAV_ITEMS: NavItem[] = [
+  { label: "Work", href: "index.html#work" },
+  { label: "Approach", href: "index.html#approach" },
+  { label: "Strengths", href: "index.html#strengths" },
+  { label: "Experience", href: "index.html#experience" },
+  { label: "Case Studies", href: "case-studies.html" },
+  { label: "Playbook", href: "playbook.html" },
+  { label: "Design System", href: "design-system.html" },
+  { label: "Contact", href: "index.html#contact" }
+];
+
 function pad3(n: number) {
   return String(Math.round(n)).padStart(3, "0");
 }

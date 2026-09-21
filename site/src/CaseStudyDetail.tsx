@@ -2,21 +2,12 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
 import { caseStudies } from "./caseStudiesData";
 import SiteChrome from "./components/SiteChrome";
-import SiteHeader from "./components/SiteHeader";
+import SiteHeader, { SITE_NAV_ITEMS } from "./components/SiteHeader";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 22 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.55 } }
 };
-
-const NAV_ITEMS = [
-  { label: "Home", href: "index.html" },
-  { label: "Work", href: "index.html#work" },
-  { label: "Case Studies", href: "case-studies.html" },
-  { label: "Playbook", href: "playbook.html" },
-  { label: "Design System", href: "design-system.html" },
-  { label: "Contact", href: "index.html#contact" }
-];
 
 function CaseStudyDetail() {
   const slug = new URLSearchParams(window.location.search).get("slug");
@@ -25,7 +16,7 @@ function CaseStudyDetail() {
   return (
     <div className="site-shell">
       <SiteChrome />
-      <SiteHeader navItems={NAV_ITEMS} />
+      <SiteHeader navItems={SITE_NAV_ITEMS} />
 
       <main>
         {!cs ? (
