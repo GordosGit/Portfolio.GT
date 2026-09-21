@@ -298,8 +298,8 @@ h1 span { color: var(--amber); text-shadow: 0 0 24px rgba(255, 138, 30, 0.5); }
 }
 .eye .iris {
   position: absolute; top: 50%; left: 50%; width: 58%; height: 92%; border-radius: 50%;
-  background: radial-gradient(circle at 50% 50%, #7a4c0a 0%, #c25a00 20%, #ff8a1e 40%, #7a3a00 70%, #1a0e02 100%);
-  box-shadow: inset 0 0 12px rgba(0,0,0,0.85), 0 0 20px rgba(255, 138, 30, 0.35);
+  background: radial-gradient(circle at 50% 50%, #0a3a3a 0%, #0d6666 20%, #4ee0e0 40%, #0a3838 70%, #020e0e 100%);
+  box-shadow: inset 0 0 12px rgba(0,0,0,0.85), 0 0 20px rgba(127, 212, 212, 0.35);
   transform: translate(-50%, -50%) translate(calc(var(--ox, 0px) * 0.55), calc(var(--oy, 0px) * 0.55));
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
