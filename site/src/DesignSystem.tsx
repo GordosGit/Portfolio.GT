@@ -33,7 +33,7 @@ function DesignSystem() {
           <div className="eyebrow">BRAND INFRASTRUCTURE</div>
           <h1>The Design System.</h1>
           <p className="hero-text">
-            "Off-World Cockpit" — the visual language behind this site, packaged so it can be reused anywhere: presentations, mockups, one-pagers. Colors, type, and components below; the full portable stylesheet and a Claude skill that applies this automatically both live in the repo.
+            "Off-World Cockpit" — the visual language behind this site, packaged so it can be reused anywhere: presentations, mockups, one-pagers. Directed by me and built in collaboration with AI, start to finish. Colors, type, and components below; the full portable stylesheet and a Claude skill that applies this automatically both live in the repo.
           </p>
         </section>
 
