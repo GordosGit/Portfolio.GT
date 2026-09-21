@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowDown, ArrowUpRight, BriefcaseBusiness, CheckCircle2, Github, Linkedin, Mail } from "lucide-react";
 import { experience, projects } from "./data";
 import SiteChrome from "./components/SiteChrome";
+import NeonReflection from "./components/NeonReflection";
 import SiteHeader, { SITE_NAV_ITEMS } from "./components/SiteHeader";
 import VoightKampff from "./components/VoightKampff";
 
@@ -13,6 +14,7 @@ const fadeUp = {
 function App() {
   return (
     <div className="site-shell">
+      <NeonReflection />
       <SiteChrome />
       <SiteHeader navItems={SITE_NAV_ITEMS} />
 
