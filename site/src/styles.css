@@ -224,10 +224,10 @@ body::after {
   display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
   margin-bottom: 28px; padding-bottom: 22px; border-bottom: 1px solid var(--line); position: relative;
 }
-.name-lockup::after { content: ""; position: absolute; bottom: -1px; left: 0; width: 56px; height: 1px; background: var(--neon-pink); box-shadow: 0 0 10px var(--neon-pink); }
+.name-lockup::after { content: ""; position: absolute; bottom: -1px; left: 0; width: 56px; height: 1px; background: var(--cyan); box-shadow: 0 0 10px var(--cyan); }
 .name-lockup .n {
   font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(20px, 2.4vw, 27px);
-  color: var(--neon-pink); text-shadow: 0 0 8px rgba(255, 60, 138, 0.5), 0 0 20px rgba(255, 60, 138, 0.3); line-height: 1;
+  color: var(--cyan); text-shadow: 0 0 8px rgba(127, 212, 212, 0.5), 0 0 20px rgba(127, 212, 212, 0.3); line-height: 1;
 }
 .name-lockup .r { font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--bone-dim); }
 h1 {
