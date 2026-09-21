@@ -1,22 +1,11 @@
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
 import { caseStudies } from "./caseStudiesData";
-import SiteChrome from "./components/SiteChrome";
-import SiteHeader from "./components/SiteHeader";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 22 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.55 } }
 };
-
-const NAV_ITEMS = [
-  { label: "Home", href: "index.html" },
-  { label: "Work", href: "index.html#work" },
-  { label: "Case Studies", href: "case-studies.html" },
-  { label: "Playbook", href: "playbook.html" },
-  { label: "Design System", href: "design-system.html" },
-  { label: "Contact", href: "index.html#contact" }
-];
 
 function CaseStudyDetail() {
   const slug = new URLSearchParams(window.location.search).get("slug");
@@ -24,13 +13,19 @@ function CaseStudyDetail() {
 
   return (
     <div className="site-shell">
-      <SiteChrome />
-      <SiteHeader navItems={NAV_ITEMS} />
+      <header className="nav">
+        <a className="brand" href="index.html" aria-label="Gord Turner home">
+          <span className="brand-mark">G</span>
+          <span>GORD TURNER</span>
+        </a>
+        <nav className="nav-links">
+          <a href="case-studies.html"><ArrowLeft size={14} style={{ verticalAlign: "-2px", marginRight: "6px" }} />Back to case studies</a>
+        </nav>
+      </header>
 
       <main>
         {!cs ? (
           <section className="section playbook-hero">
-            <a className="back-link" href="case-studies.html"><ArrowLeft size={13} /> Back to case studies</a>
             <div className="eyebrow">CASE STUDY</div>
             <h1>Not found.</h1>
             <p className="hero-text">
@@ -39,9 +34,8 @@ function CaseStudyDetail() {
           </section>
         ) : (
           <section className="section playbook-list">
-            <a className="back-link" href="case-studies.html"><ArrowLeft size={13} /> Back to case studies</a>
             <motion.article initial="hidden" animate="visible" variants={fadeUp} className="playbook-entry" key={cs.slug}>
-              <div className="type"><span className="led" />{cs.type}</div>
+              <span className="eyebrow">{cs.type}</span>
               <h2>{cs.title}</h2>
               <div className="case-meta">
                 <span><strong>ROLE</strong> {cs.role}</span>
@@ -53,7 +47,7 @@ function CaseStudyDetail() {
 
               <h3 className="case-subhead">The approach</h3>
               <p className="section-lede">{cs.approachIntro}</p>
-              <div className="playbook-steps">
+              <div className={`playbook-steps${cs.approachSteps.length === 6 ? " steps-3x2" : ""}`}>
                 {cs.approachSteps.map(step => (
                   <div className="playbook-step" key={step.label}>
                     <span className="playbook-step-label">{step.label}</span>
@@ -86,21 +80,21 @@ function CaseStudyDetail() {
 
         <section className="section contact" id="contact">
           <div className="contact-card">
-            <div className="eyebrow">// OPEN CHANNEL</div>
+            <div className="eyebrow">LET'S TALK</div>
             <h2>Interested in what I can build with your team?</h2>
-            <p>For product, business analysis, AI workflow, or applied AI opportunities, I'd be happy to talk.</p>
+            <p>For product, business analysis, AI workflow, or applied AI opportunities, I’d be happy to talk.</p>
             <div className="contact-actions">
-              <a className="button primary" href="mailto:gord.turner@gmail.com"><Mail size={15} /> Email me</a>
-              <a className="button ghost" href="https://www.linkedin.com/in/gordturner/" target="_blank" rel="noreferrer"><Linkedin size={15} /> LinkedIn</a>
-              <a className="button ghost" href="https://github.com/GordosGit" target="_blank" rel="noreferrer"><Github size={15} /> GitHub</a>
+              <a className="button primary" href="mailto:gord.turner@gmail.com"><Mail size={17} /> Email me</a>
+              <a className="button ghost" href="https://www.linkedin.com/in/gordturner/" target="_blank" rel="noreferrer"><Linkedin size={17} /> LinkedIn</a>
+              <a className="button ghost" href="https://github.com/GordosGit" target="_blank" rel="noreferrer"><Github size={17} /> GitHub</a>
             </div>
           </div>
         </section>
       </main>
 
       <footer className="footer">
-        <span>© {new Date().getFullYear()} Gord Turner — Applied AI Portfolio</span>
-        <span>NODE 07 · REV 3.0</span>
+        <span>© {new Date().getFullYear()} Gord Turner</span>
+        <span>Applied AI · Product · Analysis</span>
       </footer>
     </div>
   );
