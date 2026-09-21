@@ -13,7 +13,7 @@ function pad3(n: number) {
 
 /**
  * Sticky HUD header used on every page: identity strip + live-updating
- * cockpit gauges (heading / velocity / altitude / power) for flavor, plus
+ * cockpit gauges (heading / velocity / altitude / signal) for flavor, plus
  * the real site navigation. Falls back to static values when the visitor
  * has prefers-reduced-motion set.
  */
@@ -105,7 +105,7 @@ function SiteHeader({ navItems }: Props) {
         <div className="gauge"><span className="lbl">HDG</span><span className="val">{hdg}</span></div>
         <div className="gauge"><span className="lbl">VEL</span><span className="val cyan">{vel}</span></div>
         <div className="gauge"><span className="lbl">ALT</span><span className="val">{alt}</span></div>
-        <div className="gauge"><span className="lbl">PWR</span><div className="bar" ref={pwrRef} /></div>
+        <div className="gauge"><span className="lbl">SIGNAL</span><div className="bar" ref={pwrRef} /></div>
         <div className="radar" />
       </div>
     </header>
