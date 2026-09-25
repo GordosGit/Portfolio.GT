@@ -44,14 +44,22 @@ function CaseStudyDetail() {
 
               <h3 className="case-subhead">The approach</h3>
               <p className="section-lede">{cs.approachIntro}</p>
-              <div className={`playbook-steps${cs.approachSteps.length === 6 ? " steps-3x2" : ""}`}>
-                {cs.approachSteps.map(step => (
-                  <div className="playbook-step" key={step.label}>
-                    <span className="playbook-step-label">{step.label}</span>
-                    <p>{step.text}</p>
-                  </div>
-                ))}
-              </div>
+              <ol className="case-steps">
+                {cs.approachSteps.map((step, idx) => {
+                  const match = step.label.match(/^(\d+)\.\s*(.*)$/);
+                  const num = String(match ? match[1] : idx + 1).padStart(2, "0");
+                  const title = match ? match[2] : step.label;
+                  return (
+                    <li className="case-step" key={step.label}>
+                      <span className="case-step-num">{num}</span>
+                      <div className="case-step-body">
+                        <h4 className="case-step-title">{title}</h4>
+                        <p>{step.text}</p>
+                      </div>
+                    </li>
+                  );
+                })}
+              </ol>
               <p className="section-lede case-closing">{cs.approachClosing}</p>
 
               <h3 className="case-subhead">What the results show</h3>
