@@ -33,7 +33,7 @@ export const projects: Project[] = [
     title: "Job Fit Analyzerinator",
     eyebrow: "AI SKILL",
     kind: "AI Skill",
-    description: "Compares a résumé against a job posting, identifies evidence and gaps, evaluates the match, and supports tailored application output.",
+    description: "Compares a job posting against two persona résumés (Business Analyst and Product Owner), picks the stronger fit, identifies evidence and gaps, and supports tailored application output.",
     problem: "Generic applications hide whether the candidate actually matches the requirements.",
     approach: "Treat the job description as a requirements set and the résumé as an evidence base.",
     output: "A structured fit analysis with gaps and application guidance.",
