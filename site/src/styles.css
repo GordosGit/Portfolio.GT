@@ -273,71 +273,31 @@ h1 span { color: var(--amber); text-shadow: 0 0 24px rgba(255, 138, 30, 0.5); }
 }
 .rachael .panel-label { font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--amber); display: flex; justify-content: space-between; margin-bottom: 12px; }
 .rachael .panel-label .meta { color: var(--bone-dim); letter-spacing: 0.2em; }
-.eye-stage {
-  position: relative; aspect-ratio: 4 / 3; background: radial-gradient(circle at 50% 55%, #0c0c10, #050506 70%);
-  border: 1px solid rgba(232,228,220,0.06); overflow: hidden;
+.rachael .panel-label .meta.live { color: var(--neon-pink); display: inline-flex; align-items: center; gap: 7px; }
+.rachael .panel-label .meta.live::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--neon-pink); box-shadow: 0 0 8px var(--neon-pink); }
+.portrait-stage {
+  position: relative; aspect-ratio: 4 / 5; overflow: hidden;
+  background: var(--void); border: 1px solid rgba(232,228,220,0.06);
 }
-.eye-stage::before {
-  content: ""; position: absolute; inset: 0;
-  background: radial-gradient(ellipse 60% 50% at 30% 20%, rgba(255, 138, 30, 0.1), transparent 60%),
-              radial-gradient(ellipse 50% 40% at 75% 90%, rgba(127, 212, 212, 0.08), transparent 60%);
-  pointer-events: none;
+.portrait-stage img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: 50% 14%; filter: grayscale(1) contrast(1.04);
 }
-.eye-stage::after {
-  content: ""; position: absolute; left: 0; right: 0; height: 22%; top: -22%;
-  background: linear-gradient(to bottom, transparent, rgba(127, 212, 212, 0.06), rgba(127, 212, 212, 0.12), rgba(127, 212, 212, 0.06), transparent);
+.portrait-stage::before {
+  content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(180deg, transparent 55%, rgba(8, 8, 10, 0.6) 82%, var(--void) 100%);
+}
+.portrait-stage::after {
+  content: ""; position: absolute; left: 0; right: 0; height: 22%; top: -22%; z-index: 1;
+  background: linear-gradient(to bottom, transparent, rgba(127, 212, 212, 0.05), rgba(127, 212, 212, 0.1), rgba(127, 212, 212, 0.05), transparent);
   animation: scan-sweep 6.5s ease-in-out infinite; pointer-events: none;
 }
 @keyframes scan-sweep { 0% { top: -22%; } 60% { top: 100%; } 100% { top: 100%; } }
-.eye {
-  position: absolute; top: 50%; left: 50%; width: 78%; height: 44%; border-radius: 50%; overflow: hidden;
-  background: radial-gradient(circle at 50% 50%, #000 0%, #0a0a0c 30%, #1a1218 55%, #2a1a14 80%, #0a0a0c 100%);
-  box-shadow: inset 0 0 30px rgba(0,0,0,0.9), inset 0 0 12px rgba(255, 138, 30, 0.1);
-  transform: translate(-50%, -50%) translate(var(--ox, 0px), var(--oy, 0px));
-  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-}
-.eye .iris {
-  position: absolute; top: 50%; left: 50%; width: 58%; height: 92%; border-radius: 50%;
-  background: radial-gradient(circle at 50% 50%, #0a3a3a 0%, #0d6666 20%, #4ee0e0 40%, #0a3838 70%, #020e0e 100%);
-  box-shadow: inset 0 0 12px rgba(0,0,0,0.85), 0 0 20px rgba(127, 212, 212, 0.35);
-  transform: translate(-50%, -50%) translate(calc(var(--ox, 0px) * 0.55), calc(var(--oy, 0px) * 0.55));
-  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-}
-.eye .iris::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: repeating-conic-gradient(from 0deg, rgba(0,0,0,0.35) 0deg 3deg, transparent 3deg 7deg); mix-blend-mode: multiply; opacity: 0.8; }
-.eye .pupil {
-  position: absolute; top: 50%; left: 50%; width: 34%; height: 34%; border-radius: 50%;
-  background: radial-gradient(circle at 50% 50%, #000 0%, #050305 60%, #100808 100%);
-  box-shadow: 0 0 10px rgba(0,0,0,0.9) inset; animation: pupil-react 5.2s ease-in-out infinite; transform: translate(-50%, -50%);
-}
-@keyframes pupil-react { 0%, 100% { width: 34%; height: 34%; } 40% { width: 31%; height: 31%; } 52% { width: 39%; height: 39%; } 60% { width: 34%; height: 34%; } }
-.eye .glint { position: absolute; top: 28%; left: 34%; width: 10%; height: 16%; background: radial-gradient(circle, rgba(232,228,220,0.95), transparent 70%); border-radius: 50%; filter: blur(0.5px); opacity: 0.85; }
-.eye .glint.small { top: 62%; left: 66%; width: 4%; height: 6%; opacity: 0.5; }
-.eye-stage .lash-upper, .eye-stage .lash-lower { position: absolute; left: 50%; transform: translateX(-50%); width: 78%; }
-.eye-stage .lash-upper {
-  top: 26%; height: 20%; border-top: 2px solid #050305; border-radius: 50% 50% 0 0 / 100% 100% 0 0;
-  background: radial-gradient(ellipse at 50% 100%, rgba(0,0,0,0.9), transparent 60%);
-  transform-origin: 50% 0%; animation: blink 8.5s ease-in-out infinite;
-}
-.eye-stage .lash-lower {
-  bottom: 26%; height: 20%; border-bottom: 2px solid #050305; border-radius: 0 0 50% 50% / 0 0 100% 100%;
-  background: radial-gradient(ellipse at 50% 0%, rgba(0,0,0,0.85), transparent 60%);
-}
-@keyframes blink { 0%, 92%, 100% { transform: translateX(-50%) scaleY(1); } 94% { transform: translateX(-50%) scaleY(1.9); } 96% { transform: translateX(-50%) scaleY(1); } }
-.eye-stage .reticle { position: absolute; width: 14px; height: 14px; border: 1px solid var(--amber); opacity: 0.55; }
-.eye-stage .reticle.tl { top: 8px; left: 8px; border-right: none; border-bottom: none; }
-.eye-stage .reticle.tr { top: 8px; right: 8px; border-left: none; border-bottom: none; }
-.eye-stage .reticle.bl { bottom: 8px; left: 8px; border-right: none; border-top: none; }
-.eye-stage .reticle.br { bottom: 8px; right: 8px; border-left: none; border-top: none; }
-.eye-stage .crosshair {
-  position: absolute; top: 50%; left: 50%;
-  transform: translate(-50%, -50%) translate(calc(var(--ox, 0px) * 0.25), calc(var(--oy, 0px) * 0.25));
-  width: 40px; height: 40px; border: 1px solid rgba(255, 138, 30, 0.5); border-radius: 50%; pointer-events: none;
-  animation: cross-breathe 3.6s ease-in-out infinite; transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
-}
-.eye-stage .crosshair::before, .eye-stage .crosshair::after { content: ""; position: absolute; background: rgba(255, 138, 30, 0.7); }
-.eye-stage .crosshair::before { top: 50%; left: -8px; right: -8px; height: 1px; }
-.eye-stage .crosshair::after { left: 50%; top: -8px; bottom: -8px; width: 1px; }
-@keyframes cross-breathe { 0%, 100% { width: 40px; height: 40px; opacity: 0.9; } 50% { width: 44px; height: 44px; opacity: 0.6; } }
+.portrait-stage .reticle { position: absolute; z-index: 2; width: 14px; height: 14px; border: 1px solid var(--amber); opacity: 0.55; }
+.portrait-stage .reticle.tl { top: 8px; left: 8px; border-right: none; border-bottom: none; }
+.portrait-stage .reticle.tr { top: 8px; right: 8px; border-left: none; border-bottom: none; }
+.portrait-stage .reticle.bl { bottom: 8px; left: 8px; border-right: none; border-top: none; }
+.portrait-stage .reticle.br { bottom: 8px; right: 8px; border-left: none; border-top: none; }
 .eye-readout { display: flex; justify-content: space-between; margin-top: 12px; font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--bone-dim); }
 .eye-readout .val { color: var(--amber); font-variant-numeric: tabular-nums; }
 .eye-readout .val.pink { color: var(--neon-pink); }
