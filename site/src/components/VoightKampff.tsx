@@ -36,7 +36,7 @@ function VoightKampff() {
 
         <div className="portrait-stage">
           <img
-            src={`${import.meta.env.BASE_URL}portrait.jpg`}
+            src="portrait.jpg"
             alt="Gord Turner"
             width={800}
             height={1000}
