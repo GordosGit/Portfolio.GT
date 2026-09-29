@@ -30,7 +30,7 @@ function App() {
               Turning ambiguous problems into <span>structured AI workflows</span>.
             </motion.h1>
             <motion.p initial="hidden" animate="visible" variants={fadeUp} className="hero-text">
-              I build practical AI tools that formalize the analytical work behind good product decisions — turning monsters into teddy bears, one framework at a time.
+              I build practical AI tools that formalize the analytical work behind good product decisions, one framework at a time.
             </motion.p>
             <motion.div initial="hidden" animate="visible" variants={fadeUp} className="hero-actions">
               <a className="button primary" href="#work">Explore the work <ArrowDown size={15} /></a>
