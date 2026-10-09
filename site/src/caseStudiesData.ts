@@ -214,5 +214,55 @@ export const caseStudies: CaseStudy[] = [
     nextSteps:
       "A ready-to-duplicate slide-deck template with the section/pagination scaffolding pre-wired, so starting a new HTML presentation is a copy-paste instead of a blank file.",
     githubHref: "https://github.com/GordosGit/Portfolio.GT/tree/main/design-system"
+  },
+  {
+    slug: "claude-todo-idea-to-pivot",
+    type: "Idea Validation / Decision Process",
+    title: "Claude To-Do: From Idea to Pivot",
+    hook: "The assistant on my phone told me it couldn't write to the list I'd just built. That one admission turned a half-finished build into a case study about deciding well.",
+    role: "Product Owner / Business Analyst",
+    tools: "Claude (chat, voice, scheduled tasks, hosted pages, docs), the-idea-generatorinator skill, The Olympians review skill, Todoist",
+    problem: [
+      "I already do most of my work inside Claude, and I wanted my task list to live there too: a lightweight to-do app I could use on desktop and on my phone, without paying for another subscription. The trigger was small. I asked Claude to add three job applications to Todoist, and it worked, which made me ask why I couldn't have the same thing without the extra service.",
+      "My requirements were reminders for the whole list, \"what do I need to do today?\", priorities and due dates, desktop and mobile, and use from Claude Cowork or Code. The phone mattered most: the goal was to add a task by voice, at the drop of a hat, wherever I was."
+    ],
+    approachIntro:
+      "I worked from the problem to the decision in five steps, and each step left a document I could point to:",
+    approachSteps: [
+      {
+        label: "1. Frame the problem before the solution.",
+        text: "I stated the want and the requirements first, starting from the frustration rather than from an app."
+      },
+      {
+        label: "2. Turn it into a concept brief.",
+        text: "A short interview settled four choices: a Claude-hosted page with a built-in database, scheduled-task reminders, chat plus a visual list, and a tool for one person. The output was a one-page brief with problem, solution, audience, differentiation, risks and one open question."
+      },
+      {
+        label: "3. Challenge it before building.",
+        text: "I ran the brief through a six-perspective review. The ruling was to proceed with changes and test before committing, with guardrails: no recurring tasks, subtasks or labels, chat as the main interface, and an export button so the data could never be trapped. The review flagged two assumptions as the real risks (unattended scheduled runs, and phone editing) and left one question unargued: whether to build at all, or simply put Claude on top of Todoist."
+      },
+      {
+        label: "4. Write the decision record and go/no-go criteria.",
+        text: "Before any building, I wrote four criteria: the morning digest arrives without approval prompts, phone editing is as smooth as desktop, adding a task by chat takes one sentence, and the list is trusted."
+      },
+      {
+        label: "5. Start the same morning.",
+        text: "I began the build immediately instead of waiting for a start date."
+      }
+    ],
+    approachClosing:
+      "In the first hour I built a published page with a shared database, four real tasks, an export button with Markdown and JSON, and a scheduled morning digest at 7:52 that runs without approval prompts.",
+    results:
+      "The build passed on desktop and failed on the phone. The digest passed: push notifications from the 11:56 and 11:58 test runs reached my phone, and the 11:59 email test arrived too. Phone editing failed in voice chat, which could write to Todoist but had no tool to write to the custom list. I did not test text chat on the phone. At 11:25, about 35 minutes after the first idea, I made Todoist the backbone for every task and pointed the reminders and digest at Todoist data.",
+    examples: [
+      "The phone assistant stated the gap itself, and said it was exactly the kind of go/no-go evidence the test log was meant to capture.",
+      "I first judged the digest's push notification a failure and added email as a second channel. Push had in fact arrived, so I restored it to the scope and kept email as a backup. The goal never changed, and the digest now has two delivery channels.",
+      "Every workaround for the phone gap (a typed add-task box, a morning sync into the custom list, desktop-only chat) added a second system or broke a guardrail, which is why Todoist as the backbone won."
+    ],
+    whyInteresting:
+      "The app is not the point. A vague want became a scoped, falsifiable experiment with written criteria, and the first failure against those criteria led to a decision the same morning. Because the experiment was one page, one table and one scheduled task, abandoning it cost almost nothing, and the parts that mattered carried over: Claude as the interface, due dates, priorities and the digest. The value turned out to be in the Claude layer that can read the list, remind me and act on it, and not in storing the list myself. I would test the riskiest assumption first next time, since a blank page tried from my phone would have shown the gap in minutes, and I would put the build-or-layer fork into the review itself.",
+    nextSteps:
+      "Test text chat on the phone, which this experiment did not cover, and watch whether the free Todoist plan, which I am staying on for now, holds up under daily use. Then run the Todoist-based digest for a week to see whether it earns the trust the fourth criterion asks for.",
+    githubHref: "https://github.com/GordosGit/Portfolio.GT/blob/main/case-studies/claude-todo-idea-to-pivot.md"
   }
 ];

@@ -46,6 +46,7 @@ Deeper write-ups on select projects — problem, approach, results, and what I'd
 | [`ai-assisted-job-application-pipeline`](./case-studies/ai-assisted-job-application-pipeline.md) | Building a repeatable, self-correcting evaluation pipeline for tailoring resumes and cover letters — using the `job-fit-analyzerinator` skill as the engine, with a gating rule so a weak match never gets a cover letter written for it. |
 | [`idea-validation-sunday-dinner`](./case-studies/idea-validation-sunday-dinner.md) | Running a concept brief from `the-idea-generatorinator` through a five-persona adversarial review process before committing to a build — and how the review caught that the real risk was untested, not that the idea was bad. |
 | [`pressure-testing-pocket-chef-with-olympus`](./case-studies/pressure-testing-pocket-chef-with-olympus.md) | Building Olympus (since renamed and expanded into `the-olympians`), running a new concept through it across two rounds of appeal, then catching that the review itself had stayed inside the idea's inflated frame the whole time — and rescoping from the original problem, not the inflated solution. |
+| [`claude-todo-idea-to-pivot`](./case-studies/claude-todo-idea-to-pivot.md) | Taking a subscription-free to-do idea from concept brief through a six-perspective review, written go/no-go criteria and a same-morning build, then pivoting to Todoist as the backbone when the phone test failed, with the evidence trail and workarounds that led to the call. |
 
 ### Projects
 
@@ -64,6 +65,7 @@ PortfolioGT/
 │   └── daily-job-search/
 ├── case-studies/
 │   ├── ai-assisted-job-application-pipeline.md
+│   ├── claude-todo-idea-to-pivot.md
 │   ├── idea-validation-sunday-dinner.md
 │   └── pressure-testing-pocket-chef-with-olympus.md
 ├── projects/         # planned
