@@ -135,24 +135,20 @@ body::after {
 @keyframes breathe { 50% { opacity: 0.3; } }
 .hud .name-block { display: flex; align-items: baseline; gap: 12px; min-width: 0; }
 .hud .name {
-  font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 0.01em;
+  font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.01em;
   color: var(--amber); text-transform: none;
   text-shadow: 0 0 6px rgba(255, 138, 30, 0.5), 0 0 16px rgba(255, 138, 30, 0.28);
   white-space: nowrap;
 }
-.hud .role { font-size: 11.5px; letter-spacing: 0.18em; color: var(--bone-dim); text-transform: uppercase; white-space: nowrap; }
+.hud .role { font-size: 10px; letter-spacing: 0.2em; color: var(--bone-dim); text-transform: uppercase; white-space: nowrap; }
 .hud .role::before { content: "·"; margin-right: 12px; color: var(--line); }
-.hud .status { font-size: 11.5px; letter-spacing: 0.18em; color: var(--bone-dim); text-transform: uppercase; white-space: nowrap; }
-.hud-nav { display: flex; gap: 22px; flex-wrap: wrap; justify-content: flex-end; }
-.hud-nav a { font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bone-dim); white-space: nowrap; transition: color 0.2s; }
+.hud .status { font-size: 10px; letter-spacing: 0.2em; color: var(--bone-dim); text-transform: uppercase; white-space: nowrap; }
+.hud-nav { display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-end; }
+.hud-nav a { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--bone-dim); white-space: nowrap; transition: color 0.2s; }
 .hud-nav a:hover { color: var(--cyan); }
-.hud .clock { font-size: 11.5px; letter-spacing: 0.14em; color: var(--bone-dim); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.hud .clock { font-size: 10px; letter-spacing: 0.14em; color: var(--bone-dim); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .menu-button { display: none; background: none; border: 0; color: var(--bone); padding: 4px; }
 .hud-nav-mobile { display: none; }
-
-@media (max-width: 1100px) {
-  .hud .role, .hud .status { display: none; }
-}
 
 @media (max-width: 860px) {
   .hud .role, .hud .status { display: none; }
@@ -164,7 +160,7 @@ body::after {
   }
   .hud-nav-mobile.open { display: flex; }
   .hud-nav-mobile a {
-    padding: 14px 28px; border-top: 1px solid var(--line); font-size: 13px;
+    padding: 14px 28px; border-top: 1px solid var(--line); font-size: 11px;
     letter-spacing: 0.16em; text-transform: uppercase; color: var(--bone-dim);
   }
 }
@@ -172,7 +168,7 @@ body::after {
 .cockpit {
   max-width: var(--max); margin: 0 auto;
   display: grid; grid-template-columns: 1fr; gap: 8px; padding: 4px 0 0;
-  font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--bone-dim);
+  font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--bone-dim);
 }
 @media (min-width: 640px) {
   .cockpit { grid-template-columns: auto auto auto auto 1fr; gap: 24px; align-items: center; }
