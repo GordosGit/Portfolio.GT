@@ -435,6 +435,8 @@ h1 span { color: var(--amber); text-shadow: 0 0 24px rgba(255, 138, 30, 0.5); }
    ============================================================ */
 .playbook-hero { padding-bottom: 30px; }
 .playbook-hero h1 { max-width: none; }
+.playbook-hero .eyebrow, .playbook-entry .eyebrow { color: var(--cyan); }
+.playbook-hero .eyebrow::before, .playbook-entry .eyebrow::before { background: var(--cyan); }
 .playbook-hero .hero-text { max-width: 60ch; }
 .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--amber); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 22px; }
 .playbook-list { display: flex; flex-direction: column; gap: 4px; padding-top: 0; }
