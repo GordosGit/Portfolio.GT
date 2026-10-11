@@ -412,7 +412,7 @@ h1 span { color: var(--amber); text-shadow: 0 0 24px rgba(255, 138, 30, 0.5); }
 .strength-card::before { content: ""; position: absolute; inset: 0; background: linear-gradient(120deg, transparent 40%, rgba(127, 212, 212, 0.06), transparent 60%); transform: translateX(-100%); transition: transform 0.9s ease; pointer-events: none; }
 .strength-card:hover { background: var(--void-2); }
 .strength-card:hover::before { transform: translateX(100%); }
-.strength-card h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 400; margin: 14px 0 10px; font-size: 18px; color: var(--bone); }
+.strength-card h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; margin: 14px 0 10px; font-size: 18px; color: var(--amber); }
 .strength-card > p { color: var(--white); font-size: 14.5px; line-height: 1.7; }
 .strength-proof { margin-top: 16px; padding-top: 14px; border-top: 1px dashed var(--line); }
 .strength-proof strong { color: var(--amber); font-size: 10.5px; letter-spacing: 0.2em; }
