@@ -415,7 +415,7 @@ h1 span { color: var(--amber); text-shadow: 0 0 24px rgba(255, 138, 30, 0.5); }
 .strength-card h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; margin: 14px 0 10px; font-size: 18px; color: var(--amber); }
 .strength-card > p { color: var(--white); font-size: 14.5px; line-height: 1.7; }
 .strength-proof { margin-top: 16px; padding-top: 14px; border-top: 1px dashed var(--line); }
-.strength-proof strong { color: var(--amber); font-size: 10.5px; letter-spacing: 0.2em; }
+.strength-proof strong { color: var(--cyan); font-size: 10.5px; letter-spacing: 0.2em; }
 .strength-proof p { color: var(--white); font-size: 14px; line-height: 1.65; margin: 6px 0 0; }
 
 /* ============================================================
