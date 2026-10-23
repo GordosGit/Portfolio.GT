@@ -22,8 +22,9 @@ Reusable, structured processes that guide an AI assistant through a specific wor
 | [`the-idea-generatorinator`](./skills/the-idea-generatorinator/) | Turns a one-line problem or idea into a lean concept brief (problem, solution, audience, differentiation, risks) through a short guided interview. | Requirements elicitation and discovery — asking the right sequence of questions to turn a vague ask into something a team can actually scope. |
 | [`job-fit-analyzerinator`](./skills/job-fit-analyzerinator/) | Compares a job posting against both of my current resumes (Business Analyst and Product Owner), picks the stronger persona, scores fit and ATS pass probability, identifies gaps, and builds a cover letter brief, gated by how strong the match actually is. | Gap analysis and evidence-based evaluation against a defined set of requirements, rather than a generic pass/fail. |
 | [`the-olympians`](./skills/the-olympians/) | Runs an idea or decision through Greek-god personas in one of four modes — a six-god default court, a full twelve-god pantheon for high-stakes calls, a one-on-one "temple" reading from a single named god, or a quick roster lookup to pick the right god — with a verdict that can be appealed and re-argued in the two full-court modes. | Multi-perspective risk analysis and structured decision facilitation, scaled to the size of the decision — a quick single-perspective gut-check and a full-court pressure test are different tools, not one-size-fits-all. |
+| [`spec-bot`](./skills/spec-bot/) | Interviews non-technical staff about something they want built, plays back its understanding at checkpoints, decides for itself when it has enough, and writes a fixed ten-section spec (problem, goals, users, user stories, acceptance criteria, inputs and outputs, rules, timing, requested features, open questions). | Requirements elicitation and specification: turning a vague request into a standard, build-ready document without the requester needing to know what a spec is. |
 
-Three of these chain into a pipeline: `the-problem-definerinator` gets the actual problem right, `the-idea-generatorinator` turns it into a concept brief, and `the-olympians` pressure-tests that brief before anything gets built. Each one stays useful on its own, too.
+Four of these chain into a pipeline: `the-problem-definerinator` gets the actual problem right, `the-idea-generatorinator` turns it into a concept brief, `the-olympians` pressure-tests that brief before anything gets built, and `spec-bot` turns the idea that survives into a build-ready spec. The hand-offs between them are manual for now. Each one stays useful on its own, too.
 
 Additional skills and experiments live in the companion repo, [GordosGit/tools](https://github.com/GordosGit/tools).
 
@@ -47,6 +48,7 @@ Deeper write-ups on select projects — problem, approach, results, and what I'd
 | [`idea-validation-sunday-dinner`](./case-studies/idea-validation-sunday-dinner.md) | Running a concept brief from `the-idea-generatorinator` through a five-persona adversarial review process before committing to a build — and how the review caught that the real risk was untested, not that the idea was bad. |
 | [`pressure-testing-pocket-chef-with-olympus`](./case-studies/pressure-testing-pocket-chef-with-olympus.md) | Building Olympus (since renamed and expanded into `the-olympians`), running a new concept through it across two rounds of appeal, then catching that the review itself had stayed inside the idea's inflated frame the whole time — and rescoping from the original problem, not the inflated solution. |
 | [`claude-todo-idea-to-pivot`](./case-studies/claude-todo-idea-to-pivot.md) | Taking a subscription-free to-do idea from concept brief through a six-perspective review, written go/no-go criteria and a same-morning build, then pivoting to Todoist as the backbone when the phone test failed, with the evidence trail and workarounds that led to the call. |
+| [`spec-bot-requirements-interview`](./case-studies/spec-bot-requirements-interview.md) | Building a requirements interview skill that plays back its understanding, parks solution ideas instead of dismissing them, and decides for itself when a non-technical person has said enough, then testing it on a real-feeling request and being plain about what exists and what is still a design. |
 
 ### Projects
 
@@ -60,14 +62,16 @@ PortfolioGT/
 │   ├── the-problem-definerinator/
 │   ├── the-idea-generatorinator/
 │   ├── job-fit-analyzerinator/
-│   └── the-olympians/
+│   ├── the-olympians/
+│   └── spec-bot/
 ├── agents/
 │   └── daily-job-search/
 ├── case-studies/
 │   ├── ai-assisted-job-application-pipeline.md
 │   ├── claude-todo-idea-to-pivot.md
 │   ├── idea-validation-sunday-dinner.md
-│   └── pressure-testing-pocket-chef-with-olympus.md
+│   ├── pressure-testing-pocket-chef-with-olympus.md
+│   └── spec-bot-requirements-interview.md
 ├── projects/         # planned
 └── README.md
 ```
