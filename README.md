@@ -52,7 +52,11 @@ Deeper write-ups on select projects — problem, approach, results, and what I'd
 
 ### Projects
 
-*(Coming soon — larger builds that apply these tools to real product/analysis problems.)*
+Larger builds that apply these tools to real product and analysis problems.
+
+| Project | What it does | PO/BA skill it reflects |
+|---|---|---|
+| [`job-sync-watch`](./projects/job-sync-watch/) ([live demo](https://gordosgit.github.io/Portfolio.GT/demos/job-sync-watch/dashboard-red.html)) | A traffic-light dashboard that reconciles a planning system against an ERP, explains failed job hand-offs from the loader log, and flags jobs likely to fail before they are sent. Python, standard library only, with synthetic data and 13 tests. | Integration analysis and root-cause thinking: separating "the file was sent" from "the record was accepted", and turning a daily manual check into something visible at any time. |
 
 ## Repo structure
 
@@ -72,7 +76,8 @@ PortfolioGT/
 │   ├── idea-validation-sunday-dinner.md
 │   ├── pressure-testing-pocket-chef-with-olympus.md
 │   └── spec-bot-requirements-interview.md
-├── projects/         # planned
+├── projects/
+│   └── job-sync-watch/
 └── README.md
 ```
 
