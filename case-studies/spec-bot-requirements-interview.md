@@ -30,6 +30,9 @@ I also made two scoping decisions for the first version. The output is a downloa
 
 The skill works today in a normal Claude chat. The Teams bot is a design. I wrote a short backend sketch (a Teams message comes in, the skill is loaded as the instructions, Claude replies, a Word file comes out), but I have not built it or run it.
 
+![Flow of the interview from defining the problem through two playback checkpoints to an enough-check and the spec, with a lane for parked ideas](../site/public/case-studies/spec-bot-requirements-interview/fig-1-interview-flow.png)
+*The interview, with its two playback checkpoints and the rule for when it has enough.*
+
 ## What it produced
 
 I tested it by acting as the requester on a one-line request: "I need a report that shows all overdue invoices." About ten minutes and roughly eighteen exchanges later, it gave me a three-page spec with five user stories, five acceptance criteria, and six open questions.
@@ -42,6 +45,9 @@ A few things from that run, generalized:
 - **It was wrong once and recovered.** It assumed a risk I had mentioned wasn't a problem today. I corrected it, and it took the correction and moved on, without defending the earlier read.
 - **It asked before filling in blanks.** When I told it to use its best judgement on the states an item could be in, it proposed four and asked me to confirm them. It did not write them into the spec on its own.
 - **It put what it couldn't know in the right place.** Questions like whether one person should own all the calls to a customer with several overdue items went under Open Questions, not into the requirements.
+
+![The ten sections of every spec in order, with notes on what is stamped automatically and what goes under open questions](../site/public/case-studies/spec-bot-requirements-interview/fig-2-spec-structure.png)
+*The ten-section structure of every spec. This shows the structure, not the spec from the test run.*
 
 ## Why this is the interesting part
 

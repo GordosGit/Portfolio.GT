@@ -24,6 +24,9 @@ I ran the raw idea through the Idea Generatorinator's discovery interview, and i
 
 The synthesis turned five independent critiques into one specific, gated recommendation, which is the same instinct I built into the job-application pipeline in a different form: don't spend the expensive effort until a cheap test says it's worth it.
 
+![Five reviewer personas, each with their main finding and what became of it](../site/public/case-studies/idea-validation-sunday-dinner/fig-1-five-reviewers.png)
+*Five reviewers, each attacking a different layer of the brief.*
+
 ## What the review actually found
 
 Sunday Dinner did not get built as a standalone app, and that's the correct outcome, not a failed one. The Idea Generatorinator had already surfaced the real open question in its own brief before any scrutiny started — it just isn't built to answer that kind of question, because generating a concept and stress-testing it are different jobs. What the Council added was catching that the brief's own build plan deferred the riskiest assumption until after a solo build was already sunk, and it replaced that plan with something that costs nothing to try.
@@ -34,6 +37,9 @@ A few specifics from the review worth calling out:
 - The disagreement between the Contrarian and the First Principles Thinker wasn't noise — it's exactly the distinction that determines whether "build it better" or "there may be nothing to build" is the right response.
 - A follow-up note added after the session — that the boys already use the server, just sporadically — settled that disagreement in the Contrarian's favor: intermittent use looks like a visibility problem, not disengagement, which is the kind of fact that should surface before a build decision, not after one.
 - The Expansionist's strongest point (a per-person archive/timeline has value independent of the notification problem) survived the review as a "worth adding if the experiment validates the wedge" note, not a reason to skip the test.
+
+![Flow from the brief to the five-persona review, a fork between two reviewers, and a free Discord experiment that replaced the build](../site/public/case-studies/idea-validation-sunday-dinner/fig-2-review-to-experiment.png)
+*The review produced a fork it could not settle, and a free experiment in place of a build.*
 
 ## Why this is the interesting part
 
