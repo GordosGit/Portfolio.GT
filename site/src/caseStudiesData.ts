@@ -1,3 +1,10 @@
+export type CaseStudyFigure = {
+  section: "problem" | "approach" | "results" | "examples" | "next";
+  src: string;
+  alt: string;
+  caption: string;
+};
+
 export type CaseStudy = {
   slug: string;
   type: string;
@@ -14,6 +21,7 @@ export type CaseStudy = {
   whyInteresting: string;
   nextSteps: string;
   githubHref: string;
+  figures?: CaseStudyFigure[];
 };
 
 export const caseStudies: CaseStudy[] = [
@@ -366,6 +374,50 @@ export const caseStudies: CaseStudy[] = [
       "The comparison code is short. The hard decisions were about definitions: what counts as a failure, what a status actually promises, and how much to trust a suggested fix. Separating \"what the system says happened\" from \"what happened\" is a business analysis habit, and here it's built into a tool. I also kept the machine's role narrow. It finds, explains and warns, and a person still decides and fixes. If I did it again I'd sit with the person who runs the daily check before writing any rule, and write down the failure types they see, instead of starting from my own memory of the integration.",
     nextSteps:
       "Test it against real, anonymised reject history and a real loader log. The exact-match lookups and the 30-minute grace window are my assumptions until someone who runs the integration checks them. After that comes an alert when the light changes colour, then a triage-and-fix flow: mock-run one failed record, show the analysis to a person, apply the fix in the mock run, and ask for approval before any live change, with every step logged. That flow is proposed, not built.",
-    githubHref: "https://github.com/GordosGit/Portfolio.GT/blob/main/case-studies/job-sync-watch-reconciliation.md"
+    githubHref: "https://github.com/GordosGit/Portfolio.GT/blob/main/case-studies/job-sync-watch-reconciliation.md",
+    figures: [
+      {
+        section: "problem",
+        src: "case-studies/job-sync-watch/fig-1-handoff.png",
+        alt: "Diagram of the hand-off in three rows: the planning system statuses, the ERP load that happens later and separately, and what Job Sync Watch reads",
+        caption: "The status flips to Sent when the file is written. The ERP accepts or rejects the record later and separately, and the tool reads both sides plus the log."
+      },
+      {
+        section: "approach",
+        src: "case-studies/job-sync-watch/fig-2-evidence-to-diagnosis.png",
+        alt: "One failed job shown as three pieces of evidence, the planning system record, the empty ERP query and the loader log lines, leading to the tool's diagnosis",
+        caption: "A real job from the sample data. The planning system says Sent, the ERP has no row, and the log has the reason. The tool turns the three into a cause and a suggested fix."
+      },
+      {
+        section: "results",
+        src: "case-studies/job-sync-watch/fig-3-dashboard-status-totals.png",
+        alt: "Dashboard on the bad-day sample: a red traffic light with the reasons listed, and totals for 24 hours, 7 days and 30 days",
+        caption: "The bad-day sample: one light, the reasons under it, and the totals."
+      },
+      {
+        section: "results",
+        src: "case-studies/job-sync-watch/fig-4-open-issues.png",
+        alt: "Table of five open issues, each with a problem type, age, what happened and a suggested fix",
+        caption: "Open issues, each with a cause and a suggested fix. The date mismatch (J-10265) has no log entry at all."
+      },
+      {
+        section: "results",
+        src: "case-studies/job-sync-watch/fig-5-early-warning.png",
+        alt: "Table of four jobs likely to fail on the next send, with risk levels and reasons, beside a reject trend panel",
+        caption: "Early warning: jobs still in Draft or Ready that will probably be rejected, with the reasons."
+      },
+      {
+        section: "examples",
+        src: "case-studies/job-sync-watch/fig-6-before-after-sample-data.png",
+        alt: "Two status panels of the dashboard, before and after the sample data fix, showing 9 open issues with the oldest at 668 hours and 5 open issues with the oldest at 30 hours",
+        caption: "Same code and same seed. Only the sample-data generator changed."
+      },
+      {
+        section: "next",
+        src: "case-studies/job-sync-watch/fig-7-triage-and-fix-proposal.png",
+        alt: "Slide showing a proposed triage and fix flow with two human review gates, an illustrative audit trail and guardrails",
+        caption: "A slide from the walkthrough deck: the proposed triage-and-fix flow with two human review gates and an audit trail. Proposed, not built."
+      }
+    ]
   }
 ];

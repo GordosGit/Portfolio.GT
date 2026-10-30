@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
-import { caseStudies } from "./caseStudiesData";
+import { caseStudies, type CaseStudyFigure } from "./caseStudiesData";
 import SiteChrome from "./components/SiteChrome";
 import SiteHeader, { SITE_NAV_ITEMS } from "./components/SiteHeader";
 
@@ -8,6 +8,21 @@ const fadeUp = {
   hidden: { opacity: 0, y: 22 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.55 } }
 };
+
+function Figures({ items, section }: { items?: CaseStudyFigure[]; section: CaseStudyFigure["section"] }) {
+  const list = (items ?? []).filter(f => f.section === section);
+  if (!list.length) return null;
+  return (
+    <>
+      {list.map(f => (
+        <figure className="case-figure" key={f.src}>
+          <a href={f.src} target="_blank" rel="noreferrer" title="Open full size"><img src={f.src} alt={f.alt} loading="lazy" /></a>
+          <figcaption>{f.caption}</figcaption>
+        </figure>
+      ))}
+    </>
+  );
+}
 
 function CaseStudyDetail() {
   const slug = new URLSearchParams(window.location.search).get("slug");
@@ -41,6 +56,7 @@ function CaseStudyDetail() {
 
               <h3 className="case-subhead">The problem</h3>
               {cs.problem.map((p, idx) => <p className="section-lede" key={idx}>{p}</p>)}
+              <Figures items={cs.figures} section="problem" />
 
               <h3 className="case-subhead">The approach</h3>
               <p className="section-lede">{cs.approachIntro}</p>
@@ -60,13 +76,16 @@ function CaseStudyDetail() {
                   );
                 })}
               </ol>
+              <Figures items={cs.figures} section="approach" />
               <p className="section-lede case-closing">{cs.approachClosing}</p>
 
               <h3 className="case-subhead">What the results show</h3>
               <p className="section-lede">{cs.results}</p>
+              <Figures items={cs.figures} section="results" />
               <ul className="case-examples">
                 {cs.examples.map((ex, idx) => <li key={idx}>{ex}</li>)}
               </ul>
+              <Figures items={cs.figures} section="examples" />
 
               <h3 className="case-subhead">Why this is the interesting part</h3>
               <p className="section-lede">{cs.whyInteresting}</p>
@@ -75,6 +94,7 @@ function CaseStudyDetail() {
                 <strong>NEXT STEPS</strong>
                 <p>{cs.nextSteps}</p>
               </div>
+              <Figures items={cs.figures} section="next" />
 
               <a className="text-link playbook-link" href={cs.githubHref} target="_blank" rel="noreferrer">
                 Read the full write-up on GitHub <ArrowUpRight size={14} />
