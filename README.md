@@ -48,6 +48,7 @@ Deeper write-ups on select projects — problem, approach, results, and what I'd
 | [`idea-validation-sunday-dinner`](./case-studies/idea-validation-sunday-dinner.md) | Running a concept brief from `the-idea-generatorinator` through a five-persona adversarial review process before committing to a build — and how the review caught that the real risk was untested, not that the idea was bad. |
 | [`pressure-testing-pocket-chef-with-olympus`](./case-studies/pressure-testing-pocket-chef-with-olympus.md) | Building Olympus (since renamed and expanded into `the-olympians`), running a new concept through it across two rounds of appeal, then catching that the review itself had stayed inside the idea's inflated frame the whole time — and rescoping from the original problem, not the inflated solution. |
 | [`claude-todo-idea-to-pivot`](./case-studies/claude-todo-idea-to-pivot.md) | Taking a subscription-free to-do idea from concept brief through a six-perspective review, written go/no-go criteria and a same-morning build, then pivoting to Todoist as the backbone when the phone test failed, with the evidence trail and workarounds that led to the call. |
+| [`job-sync-watch-reconciliation`](./case-studies/job-sync-watch-reconciliation.md) | Turning a daily manual check of a planning-to-ERP job hand-off into an always-on traffic light: what counts as a failure, why the log alone misses some, and what my own sample data got wrong first. |
 | [`spec-bot-requirements-interview`](./case-studies/spec-bot-requirements-interview.md) | Building a requirements interview skill that plays back its understanding, parks solution ideas instead of dismissing them, and decides for itself when a non-technical person has said enough, then testing it on a real-feeling request and being plain about what exists and what is still a design. |
 
 ### Projects
@@ -73,6 +74,7 @@ PortfolioGT/
 ├── case-studies/
 │   ├── ai-assisted-job-application-pipeline.md
 │   ├── claude-todo-idea-to-pivot.md
+│   ├── job-sync-watch-reconciliation.md
 │   ├── idea-validation-sunday-dinner.md
 │   ├── pressure-testing-pocket-chef-with-olympus.md
 │   └── spec-bot-requirements-interview.md
