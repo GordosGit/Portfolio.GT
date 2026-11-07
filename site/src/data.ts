@@ -39,6 +39,7 @@ export const projects: Project[] = [
     output: "Accurate daily/weekly totals, a task-grouped invoice draft, and a standing Discord nudge — built, tested live, and running on a real schedule.",
     skills: ["Agents", "Automation", "Spec-Driven Build", "Process Design", "Guardrails"],
     href: "https://github.com/GordosGit/Portfolio.GT/tree/main/agents/timesheet-invoicing-agent",
+    caseStudyHref: "case-study.html?slug=timesheet-invoicing-agent",
     featured: true,
     accent: "amber"
   },
