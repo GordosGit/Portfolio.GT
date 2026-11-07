@@ -570,6 +570,26 @@ export const caseStudies: CaseStudy[] = [
       "It would be easy to describe this as \"I asked an AI to build me a timesheet app\" and leave it there. What's actually worth showing is the discipline underneath it: the parts of the system that touch a client's money are deliberately boring, deterministic, and auditable, while the agent is kept to the parts where flexibility genuinely helps — understanding a casual request, deciding when to ask a question instead of guessing, orchestrating several small, correct pieces into one coherent tool. That's the same judgment call that matters in client engagements generally: AI should make the repeatable parts faster, not make the parts that need a human sign-off feel automated when they aren't.",
     nextSteps:
       "Per the original spec, the invoice layout itself was deliberately left as a plain placeholder until after the proof-of-concept stage — that decision is still open. Work is already underway on a related gap: the current draft is generated per week, with no record of which individual entries have actually been billed versus just logged, so an invoice-number column and the logic to handle partially-invoiced weeks are being added next. The desktop punch-in screen also doesn't yet reflect changes made outside it until you log something new in it — a small but real rough edge worth closing.",
-    githubHref: "https://github.com/GordosGit/Portfolio.GT/blob/main/case-studies/timesheet-invoicing-agent.md"
+    githubHref: "https://github.com/GordosGit/Portfolio.GT/blob/main/case-studies/timesheet-invoicing-agent.md",
+    figures: [
+      {
+        section: "approach",
+        src: "case-studies/timesheet-invoicing-agent/fig-1-deterministic-vs-agent.jpg",
+        alt: "Three zones: the agent handles orchestration only, deterministic code writes the spreadsheet and sends the nudge, and a human reviews and sends the real invoice",
+        caption: "Where the code stops and the agent starts: nothing dollar-facing runs without a human step."
+      },
+      {
+        section: "approach",
+        src: "case-studies/timesheet-invoicing-agent/fig-2-build-order.jpg",
+        alt: "Five build steps in order: prove the boundary, deterministic core, boring logic first, automate and test live, the draft stays a draft",
+        caption: "The build order was the risk control — automation came last, after everything it depends on was already proven correct."
+      },
+      {
+        section: "results",
+        src: "case-studies/timesheet-invoicing-agent/fig-3-bugs-caught-live.jpg",
+        alt: "Two panels comparing assumed versus actual behavior for a Discord webhook 403 error and a Windows scheduled task quoting failure, each with its one-line fix",
+        caption: "Neither bug was visible in a code review — both only existed at the boundary between the code and the real system."
+      }
+    ]
   }
 ];
