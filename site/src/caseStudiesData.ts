@@ -1,9 +1,7 @@
 export type CaseStudyFigure = {
   section: "problem" | "approach" | "results" | "examples" | "next";
-  src: string;
-  alt: string;
   caption: string;
-};
+} & ({ src: string; alt: string; diagramKey?: undefined } | { diagramKey: string; src?: undefined; alt?: undefined });
 
 export type CaseStudy = {
   slug: string;
@@ -574,20 +572,17 @@ export const caseStudies: CaseStudy[] = [
     figures: [
       {
         section: "approach",
-        src: "case-studies/timesheet-invoicing-agent/fig-1-deterministic-vs-agent.jpg",
-        alt: "Three zones: the agent handles orchestration only, deterministic code writes the spreadsheet and sends the nudge, and a human reviews and sends the real invoice",
+        diagramKey: "deterministic-vs-agent",
         caption: "Where the code stops and the agent starts: nothing dollar-facing runs without a human step."
       },
       {
         section: "approach",
-        src: "case-studies/timesheet-invoicing-agent/fig-2-build-order.jpg",
-        alt: "Five build steps in order: prove the boundary, deterministic core, boring logic first, automate and test live, the draft stays a draft",
+        diagramKey: "build-order",
         caption: "The build order was the risk control — automation came last, after everything it depends on was already proven correct."
       },
       {
         section: "results",
-        src: "case-studies/timesheet-invoicing-agent/fig-3-bugs-caught-live.jpg",
-        alt: "Two panels comparing assumed versus actual behavior for a Discord webhook 403 error and a Windows scheduled task quoting failure, each with its one-line fix",
+        diagramKey: "bugs-caught-live",
         caption: "Neither bug was visible in a code review — both only existed at the boundary between the code and the real system."
       }
     ]

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
 import { caseStudies, type CaseStudyFigure } from "./caseStudiesData";
+import { diagrams } from "./diagrams";
 import SiteChrome from "./components/SiteChrome";
 import SiteHeader, { SITE_NAV_ITEMS } from "./components/SiteHeader";
 
@@ -14,12 +15,24 @@ function Figures({ items, section }: { items?: CaseStudyFigure[]; section: CaseS
   if (!list.length) return null;
   return (
     <>
-      {list.map(f => (
-        <figure className="case-figure" key={f.src}>
-          <a href={f.src} target="_blank" rel="noreferrer" title="Open full size"><img src={f.src} alt={f.alt} loading="lazy" /></a>
-          <figcaption>{f.caption}</figcaption>
-        </figure>
-      ))}
+      {list.map(f => {
+        if (f.diagramKey) {
+          const Diagram = diagrams[f.diagramKey];
+          if (!Diagram) return null;
+          return (
+            <figure className="case-figure" key={f.diagramKey}>
+              <Diagram />
+              <figcaption>{f.caption}</figcaption>
+            </figure>
+          );
+        }
+        return (
+          <figure className="case-figure" key={f.src}>
+            <a href={f.src} target="_blank" rel="noreferrer" title="Open full size"><img src={f.src} alt={f.alt} loading="lazy" /></a>
+            <figcaption>{f.caption}</figcaption>
+          </figure>
+        );
+      })}
     </>
   );
 }
