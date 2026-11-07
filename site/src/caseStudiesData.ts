@@ -75,14 +75,12 @@ export const caseStudies: CaseStudy[] = [
     figures: [
       {
         section: "approach",
-        src: "case-studies/ai-assisted-job-application-pipeline/fig-1-gating.png",
-        alt: "Flow showing a posting scored against both personas, then three bands: 80 percent and above goes straight through, 60 to 79 percent triggers a gap conversation, under 60 percent stops, plus a standing rule about open gaps",
+        diagramKey: "gating-tiers",
         caption: "The fit score decides what happens next, and a standing rule keeps open gaps out of the letter."
       },
       {
         section: "examples",
-        src: "case-studies/ai-assisted-job-application-pipeline/fig-2-closing-gaps.png",
-        alt: "Three columns showing how a gap ended: reworded, added, or left open",
+        diagramKey: "closing-gaps",
         caption: "Three ways a gap ended, generalized from the application log."
       }
     ]
@@ -136,14 +134,12 @@ export const caseStudies: CaseStudy[] = [
     figures: [
       {
         section: "approach",
-        src: "case-studies/idea-validation-sunday-dinner/fig-1-five-reviewers.png",
-        alt: "Five reviewer personas, each with their main finding and what became of it",
+        diagramKey: "five-reviewers",
         caption: "Five reviewers, each attacking a different layer of the brief."
       },
       {
         section: "results",
-        src: "case-studies/idea-validation-sunday-dinner/fig-2-review-to-experiment.png",
-        alt: "Flow from the brief to the five-persona review, a fork between two reviewers, and a free Discord experiment that replaced the build",
+        diagramKey: "review-to-experiment",
         caption: "The review produced a fork it could not settle, and a free experiment in place of a build."
       }
     ]
@@ -205,20 +201,17 @@ export const caseStudies: CaseStudy[] = [
     figures: [
       {
         section: "approach",
-        src: "case-studies/pressure-testing-pocket-chef-with-olympus/fig-1-process.png",
-        alt: "Six steps: research, Olympus round one, two appeals, the blind spot, rescope, and Olympus round two",
+        diagramKey: "olympus-process",
         caption: "Two Olympus passes with two appeals between them, and a rescope after the blind spot was noticed."
       },
       {
         section: "results",
-        src: "case-studies/pressure-testing-pocket-chef-with-olympus/fig-2-objection-ledger.png",
-        alt: "Table of four objections with who raised them and whether the appeal resolved them or left them open",
+        diagramKey: "objection-ledger",
         caption: "The record the appeals left: which objections were resolved and which stayed open."
       },
       {
         section: "results",
-        src: "case-studies/pressure-testing-pocket-chef-with-olympus/fig-3-scope-before-after.png",
-        alt: "Two panels comparing the original brief with the rescoped proof of concept",
+        diagramKey: "scope-before-after",
         caption: "The original brief against the rescoped proof of concept."
       }
     ]
@@ -271,14 +264,12 @@ export const caseStudies: CaseStudy[] = [
     figures: [
       {
         section: "approach",
-        src: "case-studies/systemizing-a-personal-brand/fig-3-one-system-four-places.png",
-        alt: "Diagram: the finished site is split into the extracted system and the site's own chrome, then a Claude skill, and published in the portfolio repo, the tools repo and the live Design System page",
+        diagramKey: "one-system-four-places",
         caption: "The four pieces of the work in one picture: extract the system, keep the site's chrome out of it, encode it as a skill, publish it in the places I work."
       },
       {
         section: "results",
-        src: "case-studies/systemizing-a-personal-brand/fig-1-tokens.png",
-        alt: "Swatches of ten palette tokens with names, hex values and roles, beside the heading and body typefaces",
+        diagramKey: "tokens-swatch",
         caption: "The palette and type, read straight from tokens.css."
       },
       {
@@ -341,20 +332,17 @@ export const caseStudies: CaseStudy[] = [
     figures: [
       {
         section: "approach",
-        src: "case-studies/claude-todo-idea-to-pivot/fig-1-timeline.png",
-        alt: "Timeline from 10:47 to 11:25 with milestones for the stated want, concept brief, six-perspective review, decision record, build start and the pivot to Todoist",
+        diagramKey: "pivot-timeline",
         caption: "Before any building, the work went from a stated want to written go/no-go criteria in ten minutes. The pivot came 35 minutes after the first idea. Times are Toronto time on 2026-10-09."
       },
       {
         section: "results",
-        src: "case-studies/claude-todo-idea-to-pivot/fig-2-scorecard.png",
-        alt: "Table of four go/no-go criteria with results: passed, failed in voice chat, passed on desktop, and not assessed",
+        diagramKey: "pivot-scorecard",
         caption: "The four criteria were written before the build. Two passed, one failed, and one was not assessed."
       },
       {
         section: "examples",
-        src: "case-studies/claude-todo-idea-to-pivot/fig-3-workarounds.png",
-        alt: "Table of five workarounds for the phone gap with what each solves, its cost and its outcome, with Todoist as the backbone chosen",
+        diagramKey: "workarounds",
         caption: "Every workaround for the phone gap added a second system or broke a guardrail, which is why Todoist as the backbone won."
       }
     ]
@@ -413,14 +401,12 @@ export const caseStudies: CaseStudy[] = [
     figures: [
       {
         section: "approach",
-        src: "case-studies/spec-bot-requirements-interview/fig-1-interview-flow.png",
-        alt: "Flow of the interview from defining the problem through two playback checkpoints to an enough-check and the spec, with a lane for parked ideas",
+        diagramKey: "interview-flow",
         caption: "The interview, with its two playback checkpoints and the rule for when it has enough."
       },
       {
         section: "results",
-        src: "case-studies/spec-bot-requirements-interview/fig-2-spec-structure.png",
-        alt: "The ten sections of every spec in order, with notes on what is stamped automatically and what goes under open questions",
+        diagramKey: "spec-structure",
         caption: "The ten-section structure of every spec. This shows the structure, not the spec from the test run."
       }
     ]
@@ -478,44 +464,37 @@ export const caseStudies: CaseStudy[] = [
     figures: [
       {
         section: "problem",
-        src: "case-studies/job-sync-watch/fig-1-handoff.png",
-        alt: "Diagram of the hand-off in three rows: the planning system statuses, the ERP load that happens later and separately, and what Job Sync Watch reads",
+        diagramKey: "handoff",
         caption: "The status flips to Sent when the file is written. The ERP accepts or rejects the record later and separately, and the tool reads both sides plus the log."
       },
       {
         section: "approach",
-        src: "case-studies/job-sync-watch/fig-2-evidence-to-diagnosis.png",
-        alt: "One failed job shown as three pieces of evidence, the planning system record, the empty ERP query and the loader log lines, leading to the tool's diagnosis",
+        diagramKey: "evidence-to-diagnosis",
         caption: "A real job from the sample data. The planning system says Sent, the ERP has no row, and the log has the reason. The tool turns the three into a cause and a suggested fix."
       },
       {
         section: "results",
-        src: "case-studies/job-sync-watch/fig-3-dashboard-status-totals.png",
-        alt: "Dashboard on the bad-day sample: a red traffic light with the reasons listed, and totals for 24 hours, 7 days and 30 days",
+        diagramKey: "dashboard-status",
         caption: "The bad-day sample: one light, the reasons under it, and the totals."
       },
       {
         section: "results",
-        src: "case-studies/job-sync-watch/fig-4-open-issues.png",
-        alt: "Table of five open issues, each with a problem type, age, what happened and a suggested fix",
+        diagramKey: "open-issues",
         caption: "Open issues, each with a cause and a suggested fix. The date mismatch (J-10265) has no log entry at all."
       },
       {
         section: "results",
-        src: "case-studies/job-sync-watch/fig-5-early-warning.png",
-        alt: "Table of four jobs likely to fail on the next send, with risk levels and reasons, beside a reject trend panel",
+        diagramKey: "early-warning",
         caption: "Early warning: jobs still in Draft or Ready that will probably be rejected, with the reasons."
       },
       {
         section: "examples",
-        src: "case-studies/job-sync-watch/fig-6-before-after-sample-data.png",
-        alt: "Two status panels of the dashboard, before and after the sample data fix, showing 9 open issues with the oldest at 668 hours and 5 open issues with the oldest at 30 hours",
+        diagramKey: "before-after-sample-data",
         caption: "Same code and same seed. Only the sample-data generator changed."
       },
       {
         section: "next",
-        src: "case-studies/job-sync-watch/fig-7-triage-and-fix-proposal.png",
-        alt: "Slide showing a proposed triage and fix flow with two human review gates, an illustrative audit trail and guardrails",
+        diagramKey: "triage-fix-proposal",
         caption: "A slide from the walkthrough deck: the proposed triage-and-fix flow with two human review gates and an audit trail. Proposed, not built."
       }
     ]
