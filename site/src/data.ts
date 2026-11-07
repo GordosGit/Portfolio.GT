@@ -30,6 +30,19 @@ export const projects: Project[] = [
     accent: "amber"
   },
   {
+    title: "Contract Timesheet & Invoicing Agent",
+    eyebrow: "AUTONOMOUS AGENT",
+    kind: "Autonomous Agent",
+    description: "A time-tracking and invoicing tool built end-to-end in one Claude Code session: log hours conversationally or in a tiny desktop screen, get automatic daily/weekly totals, draft invoices grouped by task, and get nudged on a schedule — with nothing ever sent to a client automatically.",
+    problem: "Daily time logging and weekly invoice prep are simple in principle and easy to let slide in practice, and anything touching money needs a human in the loop before it goes out.",
+    approach: "Deterministic, auditable code for anything client-facing (spreadsheet, totals, the invoice draft), with the agent kept strictly to orchestration — plus a scheduled nudge and a human approval gate before any invoice is actually sent.",
+    output: "Accurate daily/weekly totals, a task-grouped invoice draft, and a standing Discord nudge — built, tested live, and running on a real schedule.",
+    skills: ["Agents", "Automation", "Spec-Driven Build", "Process Design", "Guardrails"],
+    href: "https://github.com/GordosGit/Portfolio.GT/tree/main/agents/timesheet-invoicing-agent",
+    featured: true,
+    accent: "amber"
+  },
+  {
     title: "Job Fit Analyzerinator",
     eyebrow: "AI SKILL",
     kind: "AI Skill",
