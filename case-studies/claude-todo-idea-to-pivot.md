@@ -26,6 +26,9 @@ I worked from the problem to the decision in five steps, and each step left a do
 
 **5. Start the same morning (11:00).** I began the build instead of waiting for a start date.
 
+![Timeline from 10:47 to 11:25 with milestones for the stated want, concept brief, six-perspective review, decision record, build start and the pivot to Todoist](../site/public/case-studies/claude-todo-idea-to-pivot/fig-1-timeline.png)
+*Before any building, the work went from a stated want to written go/no-go criteria in ten minutes. The pivot came 35 minutes after the first idea. Times are Toronto time on 2026-10-09.*
+
 ## What actually came out of it
 
 In the first hour I built a published page with a shared database showing tasks grouped as overdue, today, upcoming and no date; four real tasks (three job applications due today with Anvil as top priority, plus a task to collect portfolio samples); an export button that gained a Markdown option when I asked for it partway through; and a scheduled morning digest at 7:52 that runs without approval prompts.
@@ -52,6 +55,12 @@ In the first hour I built a published page with a shared database showing tasks 
 **The pivot (11:25).** I dropped the custom build and made Todoist the backbone for every task, keeping the reminders and morning digest but pointing them at Todoist data. What carried over: Claude as the interface, due dates and priorities, the scheduled 7:52 digest (now delivered by push notification and email, reading overdue, due-today and high-priority items from Todoist), and the decision record as the evidence trail. What I gave up: the custom page, its database and its export button, and with them the original wedge of owning the data store.
 
 **What stays unresolved.** I am staying on the free Todoist plan for now, so the original goal of avoiding a subscription holds today. Whether the free plan keeps up with daily use is untested, and I will revisit it if it does not.
+
+![Table of four go/no-go criteria with results: passed, failed in voice chat, passed on desktop, and not assessed](../site/public/case-studies/claude-todo-idea-to-pivot/fig-2-scorecard.png)
+*The four criteria were written before the build. Two passed, one failed, and one was not assessed.*
+
+![Table of five workarounds for the phone gap with what each solves, its cost and its outcome, with Todoist as the backbone chosen](../site/public/case-studies/claude-todo-idea-to-pivot/fig-3-workarounds.png)
+*Every workaround for the phone gap added a second system or broke a guardrail, which is why Todoist as the backbone won.*
 
 ## Why this is the interesting part
 

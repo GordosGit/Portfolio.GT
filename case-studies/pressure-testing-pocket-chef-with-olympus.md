@@ -22,9 +22,18 @@ My wife and I are serial recipe-video collectors — YouTube, Facebook Shorts, I
 
 **6. Re-run the narrower version through the same review before treating it as settled.** The second Olympus pass caught a smaller-scale repeat of the exact same pattern: bundling a "lightweight" suggestion feature into the PoC was, in miniature, the same scope-widening instinct that triggered the rescoping in the first place. The Edict drew a precise line — keep the suggestion layer only in its barest form, just enough to make the catalog testable in daily use, not as a feature investment of its own — and added a concrete, nearly-free next step: manually run ten real videos through transcript extraction and check the results by hand before building any app shell at all.
 
+![Six steps: research, Olympus round one, two appeals, the blind spot, rescope, and Olympus round two](../site/public/case-studies/pressure-testing-pocket-chef-with-olympus/fig-1-process.png)
+*Two Olympus passes with two appeals between them, and a rescope after the blind spot was noticed.*
+
 ## What actually came out of it
 
 A rescoped, technically honest PoC concept, with the bigger vision still alive on the roadmap rather than either abandoned or smuggled back in early. More usefully, a record of exactly which objections a counter-argument actually resolved (Apollo's identity framing, Athena's beta-phase concern) versus which stayed open on their own merits (Athena's founder-bias warning, Hephaestus's platform-fragility-at-scale flag) — because an appeal process that concedes every time it's pushed back on isn't actually testing anything.
+
+![Table of four objections with who raised them and whether the appeal resolved them or left them open](../site/public/case-studies/pressure-testing-pocket-chef-with-olympus/fig-2-objection-ledger.png)
+*The record the appeals left: which objections were resolved and which stayed open.*
+
+![Two panels comparing the original brief with the rescoped proof of concept](../site/public/case-studies/pressure-testing-pocket-chef-with-olympus/fig-3-scope-before-after.png)
+*The original brief against the rescoped proof of concept.*
 
 ## Why this is the interesting part
 

@@ -48,11 +48,16 @@ Deeper write-ups on select projects — problem, approach, results, and what I'd
 | [`idea-validation-sunday-dinner`](./case-studies/idea-validation-sunday-dinner.md) | Running a concept brief from `the-idea-generatorinator` through a five-persona adversarial review process before committing to a build — and how the review caught that the real risk was untested, not that the idea was bad. |
 | [`pressure-testing-pocket-chef-with-olympus`](./case-studies/pressure-testing-pocket-chef-with-olympus.md) | Building Olympus (since renamed and expanded into `the-olympians`), running a new concept through it across two rounds of appeal, then catching that the review itself had stayed inside the idea's inflated frame the whole time — and rescoping from the original problem, not the inflated solution. |
 | [`claude-todo-idea-to-pivot`](./case-studies/claude-todo-idea-to-pivot.md) | Taking a subscription-free to-do idea from concept brief through a six-perspective review, written go/no-go criteria and a same-morning build, then pivoting to Todoist as the backbone when the phone test failed, with the evidence trail and workarounds that led to the call. |
+| [`job-sync-watch-reconciliation`](./case-studies/job-sync-watch-reconciliation.md) | Turning a daily manual check of a planning-to-ERP job hand-off into an always-on traffic light: what counts as a failure, why the log alone misses some, and what my own sample data got wrong first. |
 | [`spec-bot-requirements-interview`](./case-studies/spec-bot-requirements-interview.md) | Building a requirements interview skill that plays back its understanding, parks solution ideas instead of dismissing them, and decides for itself when a non-technical person has said enough, then testing it on a real-feeling request and being plain about what exists and what is still a design. |
 
 ### Projects
 
-*(Coming soon — larger builds that apply these tools to real product/analysis problems.)*
+Larger builds that apply these tools to real product and analysis problems.
+
+| Project | What it does | PO/BA skill it reflects |
+|---|---|---|
+| [`job-sync-watch`](./projects/job-sync-watch/) ([live demo](https://gordosgit.github.io/Portfolio.GT/demos/job-sync-watch/dashboard-red.html)) | A traffic-light dashboard that reconciles a planning system against an ERP, explains failed job hand-offs from the loader log, and flags jobs likely to fail before they are sent. Python, standard library only, with synthetic data and 13 tests. | Integration analysis and root-cause thinking: separating "the file was sent" from "the record was accepted", and turning a daily manual check into something visible at any time. |
 
 ## Repo structure
 
@@ -69,10 +74,12 @@ PortfolioGT/
 ├── case-studies/
 │   ├── ai-assisted-job-application-pipeline.md
 │   ├── claude-todo-idea-to-pivot.md
+│   ├── job-sync-watch-reconciliation.md
 │   ├── idea-validation-sunday-dinner.md
 │   ├── pressure-testing-pocket-chef-with-olympus.md
 │   └── spec-bot-requirements-interview.md
-├── projects/         # planned
+├── projects/
+│   └── job-sync-watch/
 └── README.md
 ```
 

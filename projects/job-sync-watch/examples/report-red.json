@@ -1,0 +1,145 @@
+{
+ "as_of": "2026-10-30 09:30",
+ "light": "RED",
+ "reasons": [
+  "5 open issues (red at 4)",
+  "oldest open issue is 30 h old (red at 24 h)",
+  "7-day reject rate 10.6% (red at 5.0%)",
+  "5 open issues",
+  "4 jobs likely to fail on the next send"
+ ],
+ "issues": [
+  {
+   "job_id": "J-10264",
+   "kind": "NOT_LOADED",
+   "since": "2026-10-29T03:30:00",
+   "age_hours": 30.0,
+   "detail": "Marked 'Sent to ERP' but not in the ERP jobs table.",
+   "cause": "site_code 'S-310' is not in the ERP master data.",
+   "suggested_fix": "Correct site_code in the planner (closest valid value: S-031), then reset the status to 'Ready to Send'."
+  },
+  {
+   "job_id": "J-10265",
+   "kind": "FIELD_MISMATCH",
+   "since": "2026-10-29T13:30:00",
+   "age_hours": 20.0,
+   "detail": "start_date: planner '2026-12-04' vs ERP '2026-12-05'",
+   "cause": "Loaded without an error but the values differ. Likely a transform or mapping issue.",
+   "suggested_fix": "Compare the CSV column mapping for these fields, then correct the ERP row or re-send."
+  },
+  {
+   "job_id": "J-10263",
+   "kind": "NOT_LOADED",
+   "since": "2026-10-30T03:30:00",
+   "age_hours": 6.0,
+   "detail": "Marked 'Sent to ERP' but not in the ERP jobs table.",
+   "cause": "cost_center 'CC-1999' is not in the ERP master data.",
+   "suggested_fix": "Correct cost_center in the planner, then reset the status to 'Ready to Send'."
+  },
+  {
+   "job_id": "J-10262",
+   "kind": "NOT_LOADED",
+   "since": "2026-10-30T07:15:00",
+   "age_hours": 2.2,
+   "detail": "Marked 'Sent to ERP' but not in the ERP jobs table.",
+   "cause": "customer_code 'C-0912' is not in the ERP master data.",
+   "suggested_fix": "Correct customer_code in the planner (closest valid value: C-0012), then reset the status to 'Ready to Send'."
+  },
+  {
+   "job_id": "J-10266",
+   "kind": "STUCK_READY",
+   "since": "2026-10-30T08:40:00",
+   "age_hours": 0.833,
+   "detail": "'Ready to Send' for 50 min; the scheduler has run about 3 times since.",
+   "cause": "The scheduled job did not pick this record up.",
+   "suggested_fix": "Check the scheduler run history and whether the record is locked or filtered out."
+  }
+ ],
+ "risks": [
+  {
+   "job_id": "J-10268",
+   "status": "Ready to Send",
+   "level": "HIGH",
+   "reasons": [
+    "equipment_class 'CRN-250' is not in the ERP master data (closest: CRN-250T)",
+    "this exact value was rejected 2x in the last 30 days"
+   ]
+  },
+  {
+   "job_id": "J-10269",
+   "status": "Ready to Send",
+   "level": "HIGH",
+   "reasons": [
+    "cost_center is blank"
+   ]
+  },
+  {
+   "job_id": "J-10271",
+   "status": "Draft",
+   "level": "HIGH",
+   "reasons": [
+    "customer_code 'C-0999' is not in the ERP master data"
+   ]
+  },
+  {
+   "job_id": "J-10270",
+   "status": "Draft",
+   "level": "MEDIUM",
+   "reasons": [
+    "customer_code ' c-0042' only matches after trimming/upper-casing (C-0042); the ERP lookup is exact"
+   ]
+  }
+ ],
+ "totals": [
+  {
+   "label": "Last 24 hours",
+   "sent": 17,
+   "loaded": 15,
+   "rejected": 2,
+   "reject_rate_pct": 11.8
+  },
+  {
+   "label": "Last 7 days",
+   "sent": 62,
+   "loaded": 59,
+   "rejected": 7,
+   "reject_rate_pct": 10.6
+  },
+  {
+   "label": "Last 30 days",
+   "sent": 263,
+   "loaded": 260,
+   "rejected": 10,
+   "reject_rate_pct": 3.7
+  }
+ ],
+ "trend": {
+  "this_week_pct": 10.6,
+  "prev_week_pct": 0.0,
+  "direction": "rising"
+ },
+ "top_fields": [
+  [
+   "cost_center",
+   5
+  ],
+  [
+   "equipment_class",
+   2
+  ],
+  [
+   "customer_code",
+   2
+  ],
+  [
+   "site_code",
+   1
+  ]
+ ],
+ "pending": 1,
+ "status_counts": {
+  "Sent to ERP": 266,
+  "Ready to Send": 3,
+  "Draft": 3
+ }
+}

@@ -26,6 +26,9 @@ I built this as a skill (a reusable, versioned instruction set) rather than a on
 
 Every application, its fit score, the persona it went out under, and what was changed and why gets logged, which is what turned this from "a good prompt" into an auditable process I can point to.
 
+![Flow showing a posting scored against both personas, then three bands: 80 percent and above goes straight through, 60 to 79 percent triggers a gap conversation, under 60 percent stops, plus a standing rule about open gaps](../site/public/case-studies/ai-assisted-job-application-pipeline/fig-1-gating.png)
+*The fit score decides what happens next, and a standing rule keeps open gaps out of the letter.*
+
 ## What the log actually shows
 
 Across five applications tailored this way, fit scores ranged from the high 60s to mid 80s (percent), and the gating logic worked as designed: the strongest matches went straight through, the borderline ones triggered real back-and-forth about specific gaps (some closed because the resume was just missing evidence that existed; some stayed open and were left alone, honestly, rather than papered over), and every cover letter was built only from what survived that process.
@@ -35,6 +38,9 @@ A few examples of what "closing a gap" looked like in practice, generalized:
 - A posting wanted evidence of hands-on financial reconciliation work. The resume didn't say it explicitly, but a prior role had included exactly that, just described differently. The fix was rewording, not fabrication.
 - A posting emphasized a specific delivery methodology the resume didn't mention. That experience genuinely existed from earlier in the career, and got added.
 - A posting wanted a certification that didn't exist. That stayed flagged as an open gap and was never mentioned in the letter, per the standing rule.
+
+![Three columns showing how a gap ended: reworded, added, or left open](../site/public/case-studies/ai-assisted-job-application-pipeline/fig-2-closing-gaps.png)
+*Three ways a gap ended, generalized from the application log.*
 
 ## Why this is the interesting part
 

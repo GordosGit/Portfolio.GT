@@ -1,7 +1,7 @@
 export type Project = {
   title: string;
   eyebrow: string;
-  kind: "Autonomous Agent" | "AI Skill";
+  kind: "Autonomous Agent" | "AI Skill" | "Integration Tool";
   description: string;
   problem: string;
   approach: string;
@@ -99,6 +99,21 @@ export const projects: Project[] = [
     featured: true,
     spanFull: true,
     accent: "cyan"
+  },
+  {
+    title: "Job Sync Watch",
+    eyebrow: "INTEGRATION TOOL",
+    kind: "Integration Tool",
+    description: "A traffic-light dashboard that checks whether jobs created in a planning system actually landed in the ERP, explains each failure from the loader log, and flags jobs that are about to fail before they are sent.",
+    problem: "A \"sent\" status only means a file was written, not that the ERP accepted the record, so failed hand-offs sat unnoticed until a manual daily check.",
+    approach: "Reconcile both systems continuously, match each gap to the loader log for a cause and a suggested fix, and run explicit pre-flight rules on jobs that haven't gone out yet.",
+    output: "One status light with reasons, 24-hour, 7-day and 30-day totals, open issues with fixes, and an early-warning list.",
+    skills: ["Integration Analysis", "Root-Cause Analysis", "Data Reconciliation", "Process Design", "Python"],
+    href: "https://github.com/GordosGit/Portfolio.GT/tree/main/projects/job-sync-watch",
+    caseStudyHref: "case-study.html?slug=job-sync-watch-reconciliation",
+    featured: true,
+    spanFull: true,
+    accent: "amber"
   }
 ];
 

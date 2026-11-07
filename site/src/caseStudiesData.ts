@@ -1,3 +1,10 @@
+export type CaseStudyFigure = {
+  section: "problem" | "approach" | "results" | "examples" | "next";
+  src: string;
+  alt: string;
+  caption: string;
+};
+
 export type CaseStudy = {
   slug: string;
   type: string;
@@ -14,6 +21,7 @@ export type CaseStudy = {
   whyInteresting: string;
   nextSteps: string;
   githubHref: string;
+  figures?: CaseStudyFigure[];
 };
 
 export const caseStudies: CaseStudy[] = [
@@ -65,7 +73,21 @@ export const caseStudies: CaseStudy[] = [
       "The output of any single run, one tailored resume, one cover letter, is table stakes for an AI tool. What I think is actually worth showing is that the process caught its own failure modes and got stricter over time without needing to be manually re-prompted each time: the gap-blindness rule and the voice profile both exist because something went wrong once, got noticed, and got permanently encoded into the process instead of just fixed in the moment. That's the difference between using AI as a one-off writing tool and using it as a system with a memory of its own mistakes.",
     nextSteps:
       "I'm considering extending the same gating logic to a lightweight interview-prep step, using the same gap analysis to flag which open questions are likely to come up in a screening call, so the prep is grounded in the same evidence as the application itself rather than generic interview advice. Now that every application records which persona it went out under, I also want to see which one actually gets callbacks, and whether that should change how I split the search.",
-    githubHref: "https://github.com/GordosGit/Portfolio.GT/blob/main/case-studies/ai-assisted-job-application-pipeline.md"
+    githubHref: "https://github.com/GordosGit/Portfolio.GT/blob/main/case-studies/ai-assisted-job-application-pipeline.md",
+    figures: [
+      {
+        section: "approach",
+        src: "case-studies/ai-assisted-job-application-pipeline/fig-1-gating.png",
+        alt: "Flow showing a posting scored against both personas, then three bands: 80 percent and above goes straight through, 60 to 79 percent triggers a gap conversation, under 60 percent stops, plus a standing rule about open gaps",
+        caption: "The fit score decides what happens next, and a standing rule keeps open gaps out of the letter."
+      },
+      {
+        section: "examples",
+        src: "case-studies/ai-assisted-job-application-pipeline/fig-2-closing-gaps.png",
+        alt: "Three columns showing how a gap ended: reworded, added, or left open",
+        caption: "Three ways a gap ended, generalized from the application log."
+      }
+    ]
   },
   {
     slug: "idea-validation-sunday-dinner",
@@ -112,7 +134,21 @@ export const caseStudies: CaseStudy[] = [
       "It would be easy to only show the ideas that made it all the way to a build — that's the flattering version of \"I use AI for product work.\" The more honest and more useful version is this one: an idea that looked genuinely good enough to generate, run through a process built to disagree with it, and come out the other side with a specific, free, two-week experiment instead of a green light. That's the same gating discipline as the job-application pipeline, applied to a build decision instead of a cover letter: the tool's job isn't to make ideas feel finished, it's to make sure the expensive step only happens after the cheap one has actually been tried.",
     nextSteps:
       "The two-week Discord experiment the Council recommended hasn't been run yet — that's the actual next step for Sunday Dinner, not more concept work. If engagement moves once the existing server gets tiered notifications, the wedge is real and the standalone app becomes worth building, digest/archive features included. If it doesn't move even with zero friction and zero new app to install, that's real information worth listening to rather than a reason to build a fancier way to route around it.",
-    githubHref: "https://github.com/GordosGit/Portfolio.GT/blob/main/case-studies/idea-validation-sunday-dinner.md"
+    githubHref: "https://github.com/GordosGit/Portfolio.GT/blob/main/case-studies/idea-validation-sunday-dinner.md",
+    figures: [
+      {
+        section: "approach",
+        src: "case-studies/idea-validation-sunday-dinner/fig-1-five-reviewers.png",
+        alt: "Five reviewer personas, each with their main finding and what became of it",
+        caption: "Five reviewers, each attacking a different layer of the brief."
+      },
+      {
+        section: "results",
+        src: "case-studies/idea-validation-sunday-dinner/fig-2-review-to-experiment.png",
+        alt: "Flow from the brief to the five-persona review, a fork between two reviewers, and a free Discord experiment that replaced the build",
+        caption: "The review produced a fork it could not settle, and a free experiment in place of a build."
+      }
+    ]
   },
   {
     slug: "pressure-testing-pocket-chef-with-olympus",
@@ -167,7 +203,27 @@ export const caseStudies: CaseStudy[] = [
       "Building a tool that argues back is the easy version of this story. The harder and more useful part is what happened after two full rounds of debate and appeal: a structured, six-perspective, deliberately adversarial process still faithfully argued inside the frame it was handed, because nothing in its design asks whether the frame itself is the problem. Catching that took a different kind of scrutiny than the process itself provides — stepping outside the debate to ask if the debate was even about the right question. That's a rarer and harder skill than running a good pressure test: noticing when a good pressure test still isn't enough.",
     nextSteps:
       "Run the ten-video manual transcript test Olympus's second Edict recommended before building anything else. Olympus itself has been updated to name this blind spot directly, so a future run at least surfaces the question rather than silently inheriting whatever scope it's handed. Since this write-up, the skill itself outgrew its original six-seat scope: it's been renamed The Olympians and now runs in four modes — the original six-god default court, a full twelve-god pantheon for higher-stakes calls, a private one-on-one \"temple\" reading from a single named god, and a quick roster lookup for picking the right one — with six new gods (Hera, Poseidon, Demeter, Ares, Artemis, Dionysus) added to the pantheon.",
-    githubHref: "https://github.com/GordosGit/Portfolio.GT/blob/main/case-studies/pressure-testing-pocket-chef-with-olympus.md"
+    githubHref: "https://github.com/GordosGit/Portfolio.GT/blob/main/case-studies/pressure-testing-pocket-chef-with-olympus.md",
+    figures: [
+      {
+        section: "approach",
+        src: "case-studies/pressure-testing-pocket-chef-with-olympus/fig-1-process.png",
+        alt: "Six steps: research, Olympus round one, two appeals, the blind spot, rescope, and Olympus round two",
+        caption: "Two Olympus passes with two appeals between them, and a rescope after the blind spot was noticed."
+      },
+      {
+        section: "results",
+        src: "case-studies/pressure-testing-pocket-chef-with-olympus/fig-2-objection-ledger.png",
+        alt: "Table of four objections with who raised them and whether the appeal resolved them or left them open",
+        caption: "The record the appeals left: which objections were resolved and which stayed open."
+      },
+      {
+        section: "results",
+        src: "case-studies/pressure-testing-pocket-chef-with-olympus/fig-3-scope-before-after.png",
+        alt: "Two panels comparing the original brief with the rescoped proof of concept",
+        caption: "The original brief against the rescoped proof of concept."
+      }
+    ]
   },
   {
     slug: "systemizing-a-personal-brand",
@@ -213,7 +269,27 @@ export const caseStudies: CaseStudy[] = [
       "A Product Owner's job doesn't end when one thing ships well. It's making sure the next ten things don't each reinvent the rules, and making that consistency someone else's job — a teammate's, a contractor's, or in this case an AI's — rather than something only I can hold in my head. Turning a good-looking redesign into governed, reusable infrastructure is the same discipline I'd apply to a product's design system at work; I just applied it to my own brand first.",
     nextSteps:
       "A ready-to-duplicate slide-deck template with the section/pagination scaffolding pre-wired, so starting a new HTML presentation is a copy-paste instead of a blank file.",
-    githubHref: "https://github.com/GordosGit/Portfolio.GT/tree/main/design-system"
+    githubHref: "https://github.com/GordosGit/Portfolio.GT/tree/main/design-system",
+    figures: [
+      {
+        section: "approach",
+        src: "case-studies/systemizing-a-personal-brand/fig-3-one-system-four-places.png",
+        alt: "Diagram: the finished site is split into the extracted system and the site's own chrome, then a Claude skill, and published in the portfolio repo, the tools repo and the live Design System page",
+        caption: "The four pieces of the work in one picture: extract the system, keep the site's chrome out of it, encode it as a skill, publish it in the places I work."
+      },
+      {
+        section: "results",
+        src: "case-studies/systemizing-a-personal-brand/fig-1-tokens.png",
+        alt: "Swatches of ten palette tokens with names, hex values and roles, beside the heading and body typefaces",
+        caption: "The palette and type, read straight from tokens.css."
+      },
+      {
+        section: "results",
+        src: "case-studies/systemizing-a-personal-brand/fig-2-style-guide.png",
+        alt: "The top of the living style guide page, showing its introduction and the color section",
+        caption: "The living style guide: the page that renders every token and component with usage notes."
+      }
+    ]
   },
   {
     slug: "claude-todo-idea-to-pivot",
@@ -263,7 +339,27 @@ export const caseStudies: CaseStudy[] = [
       "The app is not the point. A vague want became a scoped, falsifiable experiment with written criteria, and the first failure against those criteria led to a decision the same morning. Because the experiment was one page, one table and one scheduled task, abandoning it cost almost nothing, and the parts that mattered carried over: Claude as the interface, due dates, priorities and the digest. The value turned out to be in the Claude layer that can read the list, remind me and act on it, and not in storing the list myself. I would test the riskiest assumption first next time, since a blank page tried from my phone would have shown the gap in minutes, and I would put the build-or-layer fork into the review itself.",
     nextSteps:
       "Test text chat on the phone, which this experiment did not cover, and watch whether the free Todoist plan, which I am staying on for now, holds up under daily use. Then run the Todoist-based digest for a week to see whether it earns the trust the fourth criterion asks for.",
-    githubHref: "https://github.com/GordosGit/Portfolio.GT/blob/main/case-studies/claude-todo-idea-to-pivot.md"
+    githubHref: "https://github.com/GordosGit/Portfolio.GT/blob/main/case-studies/claude-todo-idea-to-pivot.md",
+    figures: [
+      {
+        section: "approach",
+        src: "case-studies/claude-todo-idea-to-pivot/fig-1-timeline.png",
+        alt: "Timeline from 10:47 to 11:25 with milestones for the stated want, concept brief, six-perspective review, decision record, build start and the pivot to Todoist",
+        caption: "Before any building, the work went from a stated want to written go/no-go criteria in ten minutes. The pivot came 35 minutes after the first idea. Times are Toronto time on 2026-10-09."
+      },
+      {
+        section: "results",
+        src: "case-studies/claude-todo-idea-to-pivot/fig-2-scorecard.png",
+        alt: "Table of four go/no-go criteria with results: passed, failed in voice chat, passed on desktop, and not assessed",
+        caption: "The four criteria were written before the build. Two passed, one failed, and one was not assessed."
+      },
+      {
+        section: "examples",
+        src: "case-studies/claude-todo-idea-to-pivot/fig-3-workarounds.png",
+        alt: "Table of five workarounds for the phone gap with what each solves, its cost and its outcome, with Todoist as the backbone chosen",
+        caption: "Every workaround for the phone gap added a second system or broke a guardrail, which is why Todoist as the backbone won."
+      }
+    ]
   },
   {
     slug: "spec-bot-requirements-interview",
@@ -315,6 +411,115 @@ export const caseStudies: CaseStudy[] = [
       "A chatbot that asks questions is easy to build. What I think is worth showing is the set of decisions that make an interview trustworthy for someone who isn't technical. The bot owns the \"are we done\" call, so the person never has to guess. It reflects its understanding back in plain words, so errors get caught while they are cheap. It parks ideas without dismissing them. It refuses to invent anything it wasn't told. And the output format is fixed, so the next reader, human or AI, never has to hunt for anything. It is the same problem-framing discipline as my other work, applied to a live conversation instead of a document.",
     nextSteps:
       "The first thing I want to test is the handoff itself. I haven't yet given a finished spec to an AI coding assistant to see what it builds. Whatever it has to guess is a gap in the template, and I'd feed that back into the skill. After that, I want to run more interviews on different kinds of requests, especially with people who give short answers, build the Teams bot from the backend sketch, add ticket creation once the team's tracking tool is known, and add scope checks and usage limits before anyone outside a pilot group uses it.",
-    githubHref: "https://github.com/GordosGit/Portfolio.GT/blob/main/case-studies/spec-bot-requirements-interview.md"
+    githubHref: "https://github.com/GordosGit/Portfolio.GT/blob/main/case-studies/spec-bot-requirements-interview.md",
+    figures: [
+      {
+        section: "approach",
+        src: "case-studies/spec-bot-requirements-interview/fig-1-interview-flow.png",
+        alt: "Flow of the interview from defining the problem through two playback checkpoints to an enough-check and the spec, with a lane for parked ideas",
+        caption: "The interview, with its two playback checkpoints and the rule for when it has enough."
+      },
+      {
+        section: "results",
+        src: "case-studies/spec-bot-requirements-interview/fig-2-spec-structure.png",
+        alt: "The ten sections of every spec in order, with notes on what is stamped automatically and what goes under open questions",
+        caption: "The ten-section structure of every spec. This shows the structure, not the spec from the test run."
+      }
+    ]
+  },
+  {
+    slug: "job-sync-watch-reconciliation",
+    type: "Integration Monitoring / Root-Cause Analysis",
+    title: "Job Sync Watch: Making a Silent Integration Failure Visible",
+    hook: "A \"sent\" status only means a file was written. This is how I turned a daily manual check into a light that is always on, and what my own test data got wrong along the way.",
+    role: "Product Owner / Business Analyst",
+    tools: "Claude, Python (standard library only), SQLite, pytest, a synthetic data generator",
+    problem: [
+      "This comes from an integration I worked on between a planning product and a customer's ERP, as I last knew it a couple of years ago. Jobs are created in the planning system and move through three statuses: Draft, Ready to Send, and Sent. A scheduled job runs every 15 minutes, collects everything in Ready to Send, writes a CSV to a drop folder, and flips the status to Sent. A separate job on the ERP side picks the file up later.",
+      "The trouble is what \"Sent\" means. It means the file was written. It does not mean the ERP accepted the record, and sometimes it doesn't, usually because of a lookup value the ERP doesn't recognise. Nobody sees that on screen. Someone finds out at the next daily check, which compares the ERP's job tables against an extract from the planning system's API, then searches the logs for the cause, fixes the data by hand, and resets the status so the record is sent again. I wanted that check to be something you could open at any time, with the cause already attached."
+    ],
+    approachIntro:
+      "I built it as a small Python tool and worked through five decisions in order, each one settled before the code that depends on it:",
+    approachSteps: [
+      {
+        label: "1. Define what counts as a failure before computing anything.",
+        text: "A job marked Sent five minutes ago and not yet in the ERP is normal, because the ERP side is asynchronous. So a Sent job gets a 30-minute grace window before it counts. After that there are three kinds of problem: sent but not loaded, loaded but a value differs, and stuck at Ready to Send because the scheduler never picked it up."
+      },
+      {
+        label: "2. Read the log for the cause, but only the part that applies.",
+        text: "Each missing job is matched to the loader log, filtered to errors after the job's latest send, so an old error from before a manual fix doesn't get blamed. When the cause is a bad lookup value, the tool suggests the closest valid one."
+      },
+      {
+        label: "3. Compare the two systems, not just the log.",
+        text: "Some failures never reach the log. In the sample data, a loader shifts a start date by one day and reports success. The log is clean, the status is Sent, and only a side-by-side comparison of the two systems shows it. That check is why the reconcile step matters more than the log reader."
+      },
+      {
+        label: "4. Warn before the job goes out, using rules I can explain.",
+        text: "Jobs still in Draft or Ready to Send are checked for blank required fields, lookup values that aren't an exact match in the ERP's master data, values that only match after trimming or changing case, and values rejected recently. These are written rules, not a model, and every flag lists its reasons. Jobs already marked Ready come first, because they go out at the next run."
+      },
+      {
+        label: "5. Reduce it to one light with thresholds written down.",
+        text: "Red means four or more open issues, any issue older than 24 hours, or a 7-day reject rate of 5% or higher. Amber means any open issue or at-risk job. Green means neither. Under the light sit totals for the last 24 hours, 7 days and 30 days, a reject trend, and the fields that fail most. The thresholds live in a config file so whoever runs the check can argue with them."
+      }
+    ],
+    approachClosing:
+      "I built it with Claude using Python's standard library only. Four reader functions fetch the planning extract, the ERP rows, the lookup lists and the log, so swapping in a real API call, SQL query and log reader means changing one file. A generator makes synthetic data for a bad day and a clean day, and 13 tests cover each rule. The dashboard is one HTML file, and a serve command rebuilds it on every page load.",
+    results:
+      "Everything here runs on invented data. Nothing has been tested against a real system. On the bad-day sample (272 jobs over 30 days) the light is red with five open issues: three rejects open for about 2, 6 and 30 hours, one silent date mismatch, and one job stuck at Ready to Send for 50 minutes. Four more jobs are flagged as likely to fail on the next send, and the 7-day reject rate is 10.6% against 0% the week before. On the clean-day sample the light is green with nothing open. All 13 tests pass, and the published examples rebuild identically from the generator.",
+    examples: [
+      "My first sample data made the dashboard look worse than it should. Random silent mismatches from three weeks earlier stayed open forever, so the oldest issue showed as 668 hours old. A real problem that old would have been found and fixed. The generator now fixes old rejects and only leaves recent mismatches open, because sample data has to model the cleanup as well as the failures.",
+      "A rule that looked broken was a mistake in my test value. A draft with a lowercase, space-padded customer code was reported as \"not in the master data\" instead of \"only matches after trimming\". The rule was right: the tidied code didn't exist in the master list either. I swapped in one that did.",
+      "The trend label cried wolf. A single reject in a week moved the label from flat to rising. It now needs at least two rejects before it says rising.",
+      "The suggested fix was sometimes wrong. For one unknown customer code the closest match came back as an unrelated code. I tightened the similarity cutoff so weak matches aren't offered at all."
+    ],
+    whyInteresting:
+      "The comparison code is short. The hard decisions were about definitions: what counts as a failure, what a status actually promises, and how much to trust a suggested fix. Separating \"what the system says happened\" from \"what happened\" is a business analysis habit, and here it's built into a tool. I also kept the machine's role narrow. It finds, explains and warns, and a person still decides and fixes. If I did it again I'd sit with the person who runs the daily check before writing any rule, and write down the failure types they see, instead of starting from my own memory of the integration.",
+    nextSteps:
+      "Test it against real, anonymised reject history and a real loader log. The exact-match lookups and the 30-minute grace window are my assumptions until someone who runs the integration checks them. After that comes an alert when the light changes colour, then a triage-and-fix flow: mock-run one failed record, show the analysis to a person, apply the fix in the mock run, and ask for approval before any live change, with every step logged. That flow is proposed, not built.",
+    githubHref: "https://github.com/GordosGit/Portfolio.GT/blob/main/case-studies/job-sync-watch-reconciliation.md",
+    figures: [
+      {
+        section: "problem",
+        src: "case-studies/job-sync-watch/fig-1-handoff.png",
+        alt: "Diagram of the hand-off in three rows: the planning system statuses, the ERP load that happens later and separately, and what Job Sync Watch reads",
+        caption: "The status flips to Sent when the file is written. The ERP accepts or rejects the record later and separately, and the tool reads both sides plus the log."
+      },
+      {
+        section: "approach",
+        src: "case-studies/job-sync-watch/fig-2-evidence-to-diagnosis.png",
+        alt: "One failed job shown as three pieces of evidence, the planning system record, the empty ERP query and the loader log lines, leading to the tool's diagnosis",
+        caption: "A real job from the sample data. The planning system says Sent, the ERP has no row, and the log has the reason. The tool turns the three into a cause and a suggested fix."
+      },
+      {
+        section: "results",
+        src: "case-studies/job-sync-watch/fig-3-dashboard-status-totals.png",
+        alt: "Dashboard on the bad-day sample: a red traffic light with the reasons listed, and totals for 24 hours, 7 days and 30 days",
+        caption: "The bad-day sample: one light, the reasons under it, and the totals."
+      },
+      {
+        section: "results",
+        src: "case-studies/job-sync-watch/fig-4-open-issues.png",
+        alt: "Table of five open issues, each with a problem type, age, what happened and a suggested fix",
+        caption: "Open issues, each with a cause and a suggested fix. The date mismatch (J-10265) has no log entry at all."
+      },
+      {
+        section: "results",
+        src: "case-studies/job-sync-watch/fig-5-early-warning.png",
+        alt: "Table of four jobs likely to fail on the next send, with risk levels and reasons, beside a reject trend panel",
+        caption: "Early warning: jobs still in Draft or Ready that will probably be rejected, with the reasons."
+      },
+      {
+        section: "examples",
+        src: "case-studies/job-sync-watch/fig-6-before-after-sample-data.png",
+        alt: "Two status panels of the dashboard, before and after the sample data fix, showing 9 open issues with the oldest at 668 hours and 5 open issues with the oldest at 30 hours",
+        caption: "Same code and same seed. Only the sample-data generator changed."
+      },
+      {
+        section: "next",
+        src: "case-studies/job-sync-watch/fig-7-triage-and-fix-proposal.png",
+        alt: "Slide showing a proposed triage and fix flow with two human review gates, an illustrative audit trail and guardrails",
+        caption: "A slide from the walkthrough deck: the proposed triage-and-fix flow with two human review gates and an audit trail. Proposed, not built."
+      }
+    ]
   }
 ];

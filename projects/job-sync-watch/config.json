@@ -1,0 +1,11 @@
+{
+  "grace_minutes": 30,
+  "stuck_minutes": 30,
+  "scheduler_interval_minutes": 15,
+  "red_open_issues": 4,
+  "red_oldest_issue_hours": 24,
+  "red_reject_rate_pct": 5.0,
+  "lookup_fields": ["customer_code", "site_code", "equipment_class", "cost_center"],
+  "compare_fields": ["customer_code", "site_code", "equipment_class", "cost_center", "start_date", "est_weight_t"],
+  "required_fields": ["customer_code", "site_code", "equipment_class", "cost_center", "start_date", "est_weight_t"]
+}
